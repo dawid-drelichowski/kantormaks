@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "Rate PUT request schema",
+  "description": "Rate PUT request schema",
+  "type": "object",
+  "properties": {
+    "typeId": {
+      "type": "integer",
+      "description": "Rate type id"
+    },
+    "country": {
+      "type": "string",
+      "description": "Rate country"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Rate currency"
+    },
+    "purchase": {
+      "type": "number",
+      "description": "Rate purchase"
+    },
+    "sale": {
+      "type": "number",
+      "description": "Rate sale"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Rate timestamp"
+    }
+  },
+  "required": ["typeId", "country", "currency", "purchase", "sale"],
+  "additionalProperties": false
+}

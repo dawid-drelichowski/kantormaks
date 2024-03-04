@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="{{language}}">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="kantor Maks Wrocław, wymiana walut Wrocław, kursy walut" />
+    <meta name="description" content="Kantory Maks to kantor wymiany walut, działająca na terenie Wrocławia" />
+    <title>Kantor Maks Wrocław</title>
+    <link rel="stylesheet" href="/public/main.css">
+  </head>
+  <body>
+    <header>
+      <h1>Kantormaks</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Hurtowy</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Kraj</th>
+              <th>Waluta</th>
+              <th>Kupno</th>
+              <th>Sprzedaż</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each wholesale}}
+              <tr>
+                <td>{{country}}</td>
+                <td>{{currency}}</td>
+                <td>{{formatCurrency purchase}}</td>
+                <td>{{formatCurrency sale}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </section>
+      <section>adres</section>
+      <section>
+        <h2>Detaliczny</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Kraj</th>
+              <th>Waluta</th>
+              <th>Kupno</th>
+              <th>Sprzedaż</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each retail}}
+              <tr>
+                <td>{{country}}</td>
+                <td>{{currency}}</td>
+                <td>{{formatCurrency purchase}}</td>
+                <td>{{formatCurrency sale}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <p>Kursy walut nie stanowią oferty w rozumieniu prawa i mogą być interpretowane wyłącznie jako informacje</p>
+      <p>&copy; {{currentYear}} Kantormaks</p>
+    </footer>
+  </body>
+</html>
