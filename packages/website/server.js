@@ -56,7 +56,6 @@ fastify.post(
     const next = request.body.wholesale.concat(request.body.retail)
     const updated = findChangedRates(current, next)
     const results = await updateRates(updated)
-    console.log(results)
     // @todo: error handling
     return response.redirect('/admin?updated=true')
   }

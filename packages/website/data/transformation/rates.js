@@ -1,4 +1,4 @@
-import { updateRate } from "../access/rates.js"
+import { updateRate } from '../access/rates.js'
 
 export function getRatesByTypes(rates) {
   return rates.reduce((data, rate) => {
