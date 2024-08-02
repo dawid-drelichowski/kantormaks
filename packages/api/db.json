@@ -56,10 +56,10 @@
     },
     {
       "typeId": 1,
-      "timestamp": "2024-03-04T21:18:20.626Z",
+      "timestamp": "2024-08-02T09:37:22.426Z",
       "country": "Szwecja",
       "currency": "SEK",
-      "purchase": 0.41,
+      "purchase": 5,
       "sale": 0.45,
       "id": 7
     },
