@@ -6,59 +6,74 @@
     <meta name="keywords" content="kantor Maks Wrocław, wymiana walut Wrocław, kursy walut" />
     <meta name="description" content="Kantory Maks to kantor wymiany walut, działająca na terenie Wrocławia" />
     <title>Kantor Maks Wrocław</title>
-    <link rel="stylesheet" href="/public/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.red.min.css">
+    <!--<link rel="stylesheet" href="/public/main.css">-->
   </head>
-  <body>
-    <header>
-      <h1>Kantormaks</h1>
+  <body class="container">
+    <header class="grid">
+      <h1 class="pico-color-red-700">Kantor Maks Wrocław</h1>
     </header>
     <main>
-      <section>
-        <h2>Hurtowy</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Kraj</th>
-              <th>Waluta</th>
-              <th>Kupno</th>
-              <th>Sprzedaż</th>
-            </tr>
-          </thead>
-          <tbody>
-            {{#each wholesale}}
-              <tr>
-                <td>{{country}}</td>
-                <td>{{currency}}</td>
-                <td>{{formatCurrency purchase}}</td>
-                <td>{{formatCurrency sale}}</td>
-              </tr>
-            {{/each}}
-          </tbody>
-        </table>
+      <section class="grid">
+        <address>
+          <p>Ul. Świeradowska 70</p>
+          <p>C.H. Gaj</p>
+          <p>tel kom. <a href="tel:+48607322363">607 322 363</a></p>
+          <p><a href="https://maps.app.goo.gl/cczL3JeF9xQDy8AZ6">Mapa</a></p>
+        </address>
+        <div>
+          <p>Godziny otwarcia:</p>
+          <p>Poniedziałek - Piątek: 9 - 17</p>
+          <p>Sobota: 9 - 13</p>
+        </div>
       </section>
-      <section>adres</section>
-      <section>
-        <h2>Detaliczny</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Kraj</th>
-              <th>Waluta</th>
-              <th>Kupno</th>
-              <th>Sprzedaż</th>
-            </tr>
-          </thead>
-          <tbody>
-            {{#each retail}}
+      <section class="grid">
+        <span>
+          <h2>Hurtowy</h2>
+          <table class="striped">
+            <thead>
               <tr>
-                <td>{{country}}</td>
-                <td>{{currency}}</td>
-                <td>{{formatCurrency purchase}}</td>
-                <td>{{formatCurrency sale}}</td>
+                <th>Kraj</th>
+                <th>Waluta</th>
+                <th>Kupno</th>
+                <th>Sprzedaż</th>
               </tr>
-            {{/each}}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {{#each wholesale}}
+                <tr>
+                  <td>{{country}}</td>
+                  <td>{{currency}}</td>
+                  <td>{{formatCurrency purchase}}</td>
+                  <td>{{formatCurrency sale}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </span>
+        <span>
+          <h2>Detaliczny</h2>
+          <table class="striped">
+            <thead>
+              <tr>
+                <th>Kraj</th>
+                <th>Waluta</th>
+                <th>Kupno</th>
+                <th>Sprzedaż</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each retail}}
+                <tr>
+                  <td>{{country}}</td>
+                  <td>{{currency}}</td>
+                  <td>{{formatCurrency purchase}}</td>
+                  <td>{{formatCurrency sale}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </span>
       </section>
     </main>
     <footer>
