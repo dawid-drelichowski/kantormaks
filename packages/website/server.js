@@ -62,7 +62,7 @@ fastify.post(
 );
 
 try {
-  await fastify.listen({ port: config.WEBSITE_PORT })
+  await fastify.listen({ port: config.WEBSITE_PORT, host: config.WEBSITE_HOST })
 } catch (error) {
   fastify.log.error(error)
   process.exit(1)
