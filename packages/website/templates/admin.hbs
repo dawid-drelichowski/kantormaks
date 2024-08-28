@@ -4,18 +4,19 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kantor Maks Wrocław - Panel administratora</title>
-    <link rel="stylesheet" href="/public/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.red.min.css">
+    <!--<link rel="stylesheet" href="/public/main.css">-->
   </head>
-  <body>
+  <body class="container">
     <header>
-      <h1>Kantormaks</h1>
+      <h1>Kantor Maks Wrocław</h1>
       {{#if updated}}<h2>Zmiany zostały zapisane</h2>{{/if}}
     </header>
     <main>
       <form method="post">
         <section>
           <h2>Hurtowy</h2>
-          <table>
+          <table class="striped">
             <thead>
               <tr>
                 <th>Kraj</th>
@@ -43,7 +44,7 @@
         </section>
         <section>
           <h2>Detaliczny</h2>
-          <table>
+          <table class="striped">
             <thead>
               <tr>
                 <th>Kraj</th>
@@ -73,7 +74,7 @@
       </form>
     </main>
     <footer>
-      <p>&copy; {{currentYear}} Kantormaks</p>
+      <p>&copy; {{currentYear}} Kantor Maks</p>
     </footer>
   </body>
 </html>

@@ -1,15 +1,7 @@
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main {
-  display: flex;
-  flex-direction: row;
-}
-h1 {
-  color: red;
-}
-h2 {
-  text-align: center;
+:root:not([data-theme]) {
+  --pico-primary: var(--pico-primary-background);
+  --pico-primary-hover: var(--pico-primary-hover-background);
+  --pico-primary-underline: var(--pico-primary);
+  --pico-primary-hover-underline: var(--pico-primary-hover-background);
+  --pico-h1-color: var(--pico-primary);
 }

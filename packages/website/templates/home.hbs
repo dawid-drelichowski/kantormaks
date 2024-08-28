@@ -7,11 +7,11 @@
     <meta name="description" content="Kantory Maks to kantor wymiany walut, działająca na terenie Wrocławia" />
     <title>Kantor Maks Wrocław</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.red.min.css">
-    <!--<link rel="stylesheet" href="/public/main.css">-->
+    <link rel="stylesheet" href="/public/main.css">
   </head>
   <body class="container">
     <header class="grid">
-      <h1 class="pico-color-red-700">Kantor Maks Wrocław</h1>
+      <h1>Kantor Maks Wrocław</h1>
     </header>
     <main>
       <section class="grid">
@@ -29,30 +29,7 @@
       </section>
       <section class="grid">
         <span>
-          <h2>Hurtowy</h2>
-          <table class="striped">
-            <thead>
-              <tr>
-                <th>Kraj</th>
-                <th>Waluta</th>
-                <th>Kupno</th>
-                <th>Sprzedaż</th>
-              </tr>
-            </thead>
-            <tbody>
-              {{#each wholesale}}
-                <tr>
-                  <td>{{country}}</td>
-                  <td>{{currency}}</td>
-                  <td>{{formatCurrency purchase}}</td>
-                  <td>{{formatCurrency sale}}</td>
-                </tr>
-              {{/each}}
-            </tbody>
-          </table>
-        </span>
-        <span>
-          <h2>Detaliczny</h2>
+          <h3>Tabela kursów detalicznych</h3>
           <table class="striped">
             <thead>
               <tr>
@@ -74,11 +51,34 @@
             </tbody>
           </table>
         </span>
+        <span>
+          <h3>Tabela kursów hurtowych</h3>
+          <table class="striped">
+            <thead>
+              <tr>
+                <th>Kraj</th>
+                <th>Waluta</th>
+                <th>Kupno</th>
+                <th>Sprzedaż</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each wholesale}}
+                <tr>
+                  <td>{{country}}</td>
+                  <td>{{currency}}</td>
+                  <td>{{formatCurrency purchase}}</td>
+                  <td>{{formatCurrency sale}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </span>
       </section>
     </main>
     <footer>
       <p>Kursy walut nie stanowią oferty w rozumieniu prawa i mogą być interpretowane wyłącznie jako informacje</p>
-      <p>&copy; {{currentYear}} Kantormaks</p>
+      <p>&copy; {{currentYear}} Kantor Maks</p>
     </footer>
   </body>
 </html>
