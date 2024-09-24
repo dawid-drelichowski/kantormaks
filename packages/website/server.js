@@ -15,7 +15,6 @@ import { getRates } from './data/access/rates.js'
 import { getRatesByTypes, updateRates } from './data/transformation/rates.js'
 import { findChangedRates } from './data/comparison/rates.js'
 
-
 const fastify = Fastify({
   logger: true,
 }).register(fastifyBasicAuth, {
@@ -42,9 +41,12 @@ fastify.get(
   '/admin',
   { onRequest: (...args) => fastify.basicAuth(...args) },
   async (request, response) => {
+    const success = !!request.query.success
+    const error = !!request.query.error
+
     const rates = await getRates()
     const viewData = getRatesByTypes(rates)
-    return response.view('templates/admin.hbs', { ...viewData, updated: request.query.updated || false })
+    return response.view('templates/admin.hbs', { ...viewData, success, error })
   }
 )
 
@@ -55,14 +57,21 @@ fastify.post(
     const current = await getRates()
     const next = request.body.wholesale.concat(request.body.retail)
     const updated = findChangedRates(current, next)
-    const results = await updateRates(updated)
-    // @todo: error handling
-    return response.redirect('/admin?updated=true')
+    let result = ''
+
+    try {
+      await updateRates(updated)
+      result = 'success'
+    } catch (error) {
+      fastify.log.error(error)
+      result = 'error'
+    }
+    return response.redirect(`/admin?${result}=true`)
   }
 );
 
 try {
-  await fastify.listen({ port: config.WEBSITE_PORT, host: config.WEBSITE_HOST })
+  fastify.listen({ port: config.WEBSITE_PORT, host: config.WEBSITE_HOST })
 } catch (error) {
   fastify.log.error(error)
   process.exit(1)

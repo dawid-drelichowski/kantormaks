@@ -4,7 +4,8 @@
   "description": "Kantormaks website based on Fastify",
   "scripts": {
     "start": "node server.js",
-    "dev": "node --watch server.js"
+    "dev": "node --watch server.js",
+    "assets:build": "lightningcss --minify --bundle --sourcemap assets/main.css -o public/main.css"
   },
   "author": "Dawid Drelichowski",
   "license": "ISC",
@@ -21,5 +22,9 @@
   },
   "imports": {
     "#config": "./config.js"
+  },
+  "devDependencies": {
+    "@picocss/pico": "^2.0.6",
+    "lightningcss-cli": "^1.27.0"
   }
 }

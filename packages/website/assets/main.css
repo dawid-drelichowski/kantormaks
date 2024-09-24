@@ -1,7 +1,24 @@
+@import '../../../node_modules/@picocss/pico/css/pico.red.css';
+
 :root:not([data-theme]) {
   --pico-primary: var(--pico-primary-background);
   --pico-primary-hover: var(--pico-primary-hover-background);
   --pico-primary-underline: var(--pico-primary);
   --pico-primary-hover-underline: var(--pico-primary-hover-background);
   --pico-h1-color: var(--pico-primary);
+}
+
+.centered {
+  text-align: center;
+}
+.success {
+  color: var(--pico-ins-color);
+}
+.failure {
+  color: var(--pico-del-color);
+}
+input[type="submit"] {
+  display: block;
+  width: 50%;
+  margin: auto;
 }
