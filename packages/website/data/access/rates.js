@@ -10,7 +10,7 @@ export async function updateRate(id, changes) {
     method: 'PUT',
     headers: {
       'content-Type': 'application/json',
-      'authorization': `Basic ${btoa(`${config.WEBSITE_API_USER}:${config.WEBSITE_API_PASSWORD}`)}`,
+      authorization: `Basic ${btoa(`${config.WEBSITE_API_USER}:${config.WEBSITE_API_PASSWORD}`)}`,
     },
     body: JSON.stringify(changes),
   })

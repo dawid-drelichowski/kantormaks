@@ -9,7 +9,10 @@ async function getValidate(key) {
 
   if (!validate) {
     try {
-      const { default: schema} = await import(`./validation/schemas/${key}.json`, { with: { type: 'json' } })
+      const { default: schema } = await import(
+        `./validation/schemas/${key}.json`,
+        { with: { type: 'json' } }
+      )
       validator.addSchema(schema, key)
       validate = validator.getSchema(key)
     } catch (error) {

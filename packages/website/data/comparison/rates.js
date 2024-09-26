@@ -1,9 +1,7 @@
 import { normalizeRate } from '../transformation/rates.js'
 
 export function areRatesEqual(first, second) {
-  return Object
-    .keys(first)
-    .every((key) => first[key] === second[key])
+  return Object.keys(first).every((key) => first[key] === second[key])
 }
 
 export function findChangedRates(first, second) {

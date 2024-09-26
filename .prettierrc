@@ -1,0 +1,20 @@
+{
+  "singleQuote": false,
+  "trailingComma": "all",
+  "semi": false,
+  "endOfLine": "lf",
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "singleQuote": true
+      }
+    },
+    {
+      "files": "*.hbs",
+      "options": {
+        "parser": "html"
+      }
+    }
+  ]
+}

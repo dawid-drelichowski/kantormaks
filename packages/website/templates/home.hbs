@@ -1,12 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{language}}">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="kantor Maks Wrocław, wymiana walut Wrocław, kursy walut" />
-    <meta name="description" content="Kantory Maks to kantor wymiany walut, działająca na terenie Wrocławia" />
+    <meta
+      name="keywords"
+      content="kantor Maks Wrocław, wymiana walut Wrocław, kursy walut"
+    />
+    <meta
+      name="description"
+      content="Kantory Maks to kantor wymiany walut, działająca na terenie Wrocławia"
+    />
     <title>Kantor Maks Wrocław</title>
-    <link rel="stylesheet" href="/public/main.css">
+    <link rel="stylesheet" href="/public/main.css" />
   </head>
   <body class="container">
     <header class="grid centered">
@@ -28,7 +34,7 @@
       </section>
       <section class="grid">
         <span>
-          <h3  class="centered">Tabela kursów detalicznych</h3>
+          <h3 class="centered">Tabela kursów detalicznych</h3>
           <table class="striped">
             <thead>
               <tr>
@@ -40,12 +46,12 @@
             </thead>
             <tbody>
               {{#each retail}}
-                <tr>
-                  <td>{{country}}</td>
-                  <td>{{currency}}</td>
-                  <td>{{formatCurrency purchase}}</td>
-                  <td>{{formatCurrency sale}}</td>
-                </tr>
+              <tr>
+                <td>{{country}}</td>
+                <td>{{currency}}</td>
+                <td>{{formatCurrency purchase}}</td>
+                <td>{{formatCurrency sale}}</td>
+              </tr>
               {{/each}}
             </tbody>
           </table>
@@ -63,12 +69,12 @@
             </thead>
             <tbody>
               {{#each wholesale}}
-                <tr>
-                  <td>{{country}}</td>
-                  <td>{{currency}}</td>
-                  <td>{{formatCurrency purchase}}</td>
-                  <td>{{formatCurrency sale}}</td>
-                </tr>
+              <tr>
+                <td>{{country}}</td>
+                <td>{{currency}}</td>
+                <td>{{formatCurrency purchase}}</td>
+                <td>{{formatCurrency sale}}</td>
+              </tr>
               {{/each}}
             </tbody>
           </table>
@@ -76,12 +82,25 @@
       </section>
     </main>
     <footer class="centered">
-      <p>Kursy walut nie stanowią oferty w rozumieniu prawa i mogą być interpretowane wyłącznie jako informacje</p>
+      <p>
+        Kursy walut nie stanowią oferty w rozumieniu prawa i mogą być
+        interpretowane wyłącznie jako informacje
+      </p>
       <p>&copy; {{currentYear}} Kantor Maks</p>
     </footer>
-    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js" data-collect-dnt="true"></script>
+    <script
+      async
+      defer
+      src="https://scripts.simpleanalyticscdn.com/latest.js"
+      data-collect-dnt="true"
+    ></script>
     <noscript>
-      <img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" data-collect-dnt="true" />
+      <img
+        src="https://queue.simpleanalyticscdn.com/noscript.gif"
+        alt=""
+        referrerpolicy="no-referrer-when-downgrade"
+        data-collect-dnt="true"
+      />
     </noscript>
   </body>
 </html>

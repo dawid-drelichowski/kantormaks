@@ -1,4 +1,4 @@
-@import '../../../node_modules/@picocss/pico/css/pico.red.css';
+@import "../../../node_modules/@picocss/pico/css/pico.red.css";
 
 :root:not([data-theme]) {
   --pico-primary: var(--pico-primary-background);

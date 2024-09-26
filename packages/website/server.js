@@ -17,19 +17,23 @@ import { findChangedRates } from './data/comparison/rates.js'
 
 const fastify = Fastify({
   logger: true,
-}).register(fastifyBasicAuth, {
-  validate: isAuthorized,
-  authenticate: { realm: 'Access to the admin page' },
-}).register(fastifyFormBody, {
-  parser: parse,
-}).register(fastifyView, {
-  engine: {
-    handlebars,
-  }
-}).register(fastifyStatic, {
-  root: path.join(path.dirname(fileURLToPath(import.meta.url)), 'public'),
-  prefix: '/public/',
 })
+  .register(fastifyBasicAuth, {
+    validate: isAuthorized,
+    authenticate: { realm: 'Access to the admin page' },
+  })
+  .register(fastifyFormBody, {
+    parser: parse,
+  })
+  .register(fastifyView, {
+    engine: {
+      handlebars,
+    },
+  })
+  .register(fastifyStatic, {
+    root: path.join(path.dirname(fileURLToPath(import.meta.url)), 'public'),
+    prefix: '/public/',
+  })
 
 fastify.get('/', async (request, response) => {
   const rates = await getRates()
@@ -46,8 +50,12 @@ fastify.get(
 
     const rates = await getRates()
     const viewData = getRatesByTypes(rates)
-    return response.view('templates/admin.hbs', { ...viewData, success, error })
-  }
+    return response.view('templates/admin.hbs', {
+      ...viewData,
+      success,
+      error,
+    })
+  },
 )
 
 fastify.post(
@@ -67,8 +75,8 @@ fastify.post(
       result = 'error'
     }
     return response.redirect(`/admin?${result}=true`)
-  }
-);
+  },
+)
 
 try {
   fastify.listen({ port: config.WEBSITE_PORT, host: config.WEBSITE_HOST })
