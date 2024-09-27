@@ -11,6 +11,7 @@ import { fileURLToPath } from 'node:url'
 import config from '#config'
 import handlebars from './view/helpers.js'
 import { isAuthorized } from './authorization.js'
+import { errorHandler } from './error.js'
 import { getRates } from './data/access/rates.js'
 import { getRatesByTypes, updateRates } from './data/transformation/rates.js'
 import { findChangedRates } from './data/comparison/rates.js'
@@ -34,6 +35,10 @@ const fastify = Fastify({
     root: path.join(path.dirname(fileURLToPath(import.meta.url)), 'public'),
     prefix: '/public/',
   })
+  .setErrorHandler(errorHandler)
+  .setNotFoundHandler((request, response) =>
+    errorHandler({ statusCode: 404, message: 'Not found' }, request, response),
+  )
 
 fastify.get('/', async (request, response) => {
   const rates = await getRates()

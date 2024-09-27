@@ -25,6 +25,8 @@
   },
   "devDependencies": {
     "@picocss/pico": "^2.0.6",
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.7.2",
     "lightningcss-cli": "^1.27.0"
   }
 }
