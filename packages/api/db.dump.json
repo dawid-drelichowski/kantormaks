@@ -2,38 +2,38 @@
   "rates": [
     {
       "typeId": 1,
-      "timestamp": "2024-09-24T11:01:24.873Z",
+      "timestamp": "",
       "country": "Stany Zjednoczone",
       "currency": "USD",
-      "purchase": 0.0657,
-      "sale": 77.7701,
+      "purchase": 0,
+      "sale": 0,
       "id": 1
     },
     {
       "typeId": 1,
-      "timestamp": "2024-09-24T10:49:55.475Z",
+      "timestamp": "",
       "country": "Unia Europejska",
       "currency": "EUR",
-      "purchase": 4.6662,
-      "sale": 5.8,
+      "purchase": 0,
+      "sale": 0,
       "id": 2
     },
     {
       "typeId": 1,
-      "timestamp": "2024-09-24T10:30:15.427Z",
+      "timestamp": "",
       "country": "Wielka Brytania",
       "currency": "GBP",
-      "purchase": 5.22,
-      "sale": 5.41,
+      "purchase": 0,
+      "sale": 0,
       "id": 3
     },
     {
       "typeId": 1,
-      "timestamp": "2024-09-24T11:02:08.948Z",
+      "timestamp": "",
       "country": "Szwajcaria",
       "currency": "CHF",
-      "purchase": 4.6502,
-      "sale": 4.85,
+      "purchase": 0,
+      "sale": 0,
       "id": 4
     },
     {
@@ -41,26 +41,26 @@
       "typeId": 1,
       "country": "Australia",
       "currency": "AUD",
-      "purchase": 0.9,
-      "sale": 3.05,
-      "timestamp": "2024-09-24T11:02:08.948Z"
+      "purchase": 0,
+      "sale": 0,
+      "timestamp": ""
     },
     {
       "id": 6,
       "typeId": 1,
-      "timestamp": "2023-11-24T15:59:06.171Z",
+      "timestamp": "",
       "country": "Kanada",
       "currency": "CAD",
-      "purchase": 6.21,
-      "sale": 6.22
+      "purchase": 0,
+      "sale": 0
     },
     {
       "typeId": 1,
-      "timestamp": "2024-08-02T09:37:22.426Z",
+      "timestamp": "",
       "country": "Szwecja",
       "currency": "SEK",
-      "purchase": 5,
-      "sale": 0.45,
+      "purchase": 0,
+      "sale": 0,
       "id": 7
     },
     {
@@ -68,44 +68,44 @@
       "typeId": 1,
       "country": "Węgry",
       "currency": "HUF",
-      "purchase": 0.011,
-      "sale": 0.0121,
-      "timestamp": "2024-09-24T11:02:08.948Z"
+      "purchase": 0,
+      "sale": 0,
+      "timestamp": ""
     },
     {
       "typeId": 1,
-      "timestamp": "2024-08-02T09:20:06.926Z",
+      "timestamp": "",
       "country": "Dania",
       "currency": "DKK",
-      "purchase": 0.401,
-      "sale": 0.6802,
+      "purchase": 0,
+      "sale": 0,
       "id": 9
     },
     {
       "id": 10,
       "typeId": 1,
-      "timestamp": "2023-11-24T16:04:10.904Z",
+      "timestamp": "",
       "country": "Norwegia",
       "currency": "NOK",
-      "purchase": 0.43,
-      "sale": 0.7838
+      "purchase": 0,
+      "sale": 0
     },
     {
       "id": 11,
       "typeId": 2,
-      "timestamp": "2023-11-24T16:02:47.495Z",
+      "timestamp": "",
       "country": "Stany Zjednoczone",
       "currency": "USD",
-      "purchase": 5,
-      "sale": 6
+      "purchase": 0,
+      "sale": 0
     },
     {
       "typeId": 2,
-      "timestamp": "2024-03-04T21:51:24.177Z",
+      "timestamp": "",
       "country": "Unia Europejska",
       "currency": "EUR",
-      "purchase": 4.6,
-      "sale": 4.8,
+      "purchase": 0,
+      "sale": 0,
       "id": 12
     },
     {
@@ -113,26 +113,26 @@
       "typeId": 2,
       "country": "Wielka Brytania",
       "currency": "GBP",
-      "purchase": 5.2,
-      "sale": 5.41,
-      "timestamp": "2024-09-24T11:02:08.948Z"
+      "purchase": 0,
+      "sale": 0,
+      "timestamp": ""
     },
     {
       "id": 14,
       "typeId": 2,
       "country": "Szwajcaria",
       "currency": "CHF",
-      "purchase": 4.65,
-      "sale": 4.86,
-      "timestamp": "2024-09-24T11:02:08.948Z"
+      "purchase": 0,
+      "sale": 0,
+      "timestamp": ""
     },
     {
       "typeId": 2,
-      "timestamp": "2024-08-02T09:20:50.409Z",
+      "timestamp": "",
       "country": "Australia",
       "currency": "AUD",
-      "purchase": 0.9,
-      "sale": 3.05,
+      "purchase": 0,
+      "sale": 0,
       "id": 15
     },
     {
@@ -142,42 +142,42 @@
       "currency": "CAD",
       "purchase": 6,
       "sale": 3.35,
-      "timestamp": "2024-09-24T11:02:08.948Z"
+      "timestamp": ""
     },
     {
       "id": 17,
       "typeId": 2,
       "country": "Szwecja",
       "currency": "SEK",
-      "purchase": 0.41,
-      "sale": 0.4,
-      "timestamp": "2024-09-24T11:02:08.948Z"
+      "purchase": 0,
+      "sale": 0,
+      "timestamp": ""
     },
     {
       "typeId": 2,
-      "timestamp": "2024-08-02T09:25:54.333Z",
+      "timestamp": "",
       "country": "Węgry",
       "currency": "HUF",
-      "purchase": 0.5,
-      "sale": 0.0121,
+      "purchase": 0,
+      "sale": 0,
       "id": 18
     },
     {
       "typeId": 2,
-      "timestamp": "2024-09-25T18:23:07.837Z",
+      "timestamp": "",
       "country": "Dania",
       "currency": "DKK",
-      "purchase": 0.5,
-      "sale": 0.68,
+      "purchase": 0,
+      "sale": 0,
       "id": 19
     },
     {
       "typeId": 2,
-      "timestamp": "2024-09-24T09:33:08.732Z",
+      "timestamp": "",
       "country": "Norwegia",
       "currency": "NOK",
-      "purchase": 0.45,
-      "sale": 0.78,
+      "purchase": 0,
+      "sale": 0,
       "id": 20
     }
   ]
