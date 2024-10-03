@@ -11,6 +11,11 @@ handlebars.registerHelper({
       minimumFractionDigits: 4,
       maximumFractionDigits: 4,
     }).format(value),
+  formatDate: (value) =>
+    new Intl.DateTimeFormat(locale, {
+      dateStyle: 'short',
+      timeStyle: 'short',
+    }).format(value),
   currentYear: () => new Date().getFullYear(),
 })
 

@@ -15,6 +15,7 @@ import { errorHandler } from './error.js'
 import { getRates } from './data/access/rates.js'
 import { getRatesByTypes, updateRates } from './data/transformation/rates.js'
 import { findChangedRates } from './data/comparison/rates.js'
+import { findLatestUpdatesByTypeId } from './data/processing/rates.js'
 
 const fastify = Fastify({
   logger: true,
@@ -42,8 +43,11 @@ const fastify = Fastify({
 
 fastify.get('/', async (request, response) => {
   const rates = await getRates()
-  const viewData = getRatesByTypes(rates)
-  return response.view('templates/home.hbs', { ...viewData })
+
+  return response.view('templates/home.hbs', {
+    rates: getRatesByTypes(rates),
+    latestUpdates: findLatestUpdatesByTypeId(rates),
+   })
 })
 
 fastify.get(
