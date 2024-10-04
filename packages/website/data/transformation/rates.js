@@ -2,11 +2,11 @@ import { updateRate } from '../access/rates.js'
 
 const rateTypes = new Map([
   [1, 'retail'],
-  [2, 'wholesale']
+  [2, 'wholesale'],
 ])
 
 export function getRateTypeByTypeId(id) {
-  return rateTypes.get(id);
+  return rateTypes.get(id)
 }
 
 export function getRatesByTypes(rates) {

@@ -31,7 +31,7 @@ test.describe('Admin page', () => {
     await Promise.all([
       page.getByRole('button').click(),
       page.waitForURL(`${adminUrl}?success=true`),
-    ]);
+    ])
 
     await expect(page.getByText('Zmiany zostały zapisane')).toBeVisible()
     inputs = page.getByRole('spinbutton')

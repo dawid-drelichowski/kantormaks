@@ -47,7 +47,7 @@ fastify.get('/', async (request, response) => {
   return response.view('templates/home.hbs', {
     rates: getRatesByTypes(rates),
     latestUpdates: findLatestUpdatesByTypeId(rates),
-   })
+  })
 })
 
 fastify.get(

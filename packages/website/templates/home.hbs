@@ -36,7 +36,10 @@
         <span>
           <h3 class="centered">Tabela kursów detalicznych</h3>
           {{#if latestUpdates.retail}}
-          <p class="centered">Ostatnia aktualizazja: {{formatDate latestUpdates.retail}}</p>
+          <p class="centered">
+            Ostatnia aktualizazja:
+            <time>{{formatDate latestUpdates.retail}}</time>
+          </p>
           {{/if}}
           <table class="striped">
             <thead>
@@ -62,7 +65,10 @@
         <span>
           <h3 class="centered">Tabela kursów hurtowych</h3>
           {{#if latestUpdates.wholesale}}
-          <p class="centered">Ostatnia aktualizazja: {{formatDate latestUpdates.wholesale}}</p>
+          <p class="centered">
+            Ostatnia aktualizazja:
+            <time>{{formatDate latestUpdates.wholesale}}</time>
+          </p>
           {{/if}}
           <table class="striped">
             <thead>
