@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  build:
+  integration-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,7 +35,7 @@ jobs:
         npm run assets:build -w packages/website
 
     - name: Start servers
-      run: npm start
+      run: npm start &
 
     - name: Run integration tests
       run: npm test -w packages/website
