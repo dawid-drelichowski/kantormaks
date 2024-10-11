@@ -27,7 +27,7 @@ jobs:
     - name: Setup API
       run: |
         cp ./packages/api/.env.ci ./packages/api/.env
-        cp ./packages/api/db.dumb.json ./packages/api/db.json
+        cp ./packages/api/db.dump.json ./packages/api/db.json
 
     - name: Setup website
       run: |
