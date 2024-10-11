@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "assets:build": "lightningcss --minify --bundle --sourcemap assets/main.css -o public/main.css"
+    "assets:build": "lightningcss --minify --bundle --sourcemap assets/main.css -o public/main.css",
+    "test": "playwright install && playwright test"
   },
   "author": "Dawid Drelichowski",
   "license": "ISC",
