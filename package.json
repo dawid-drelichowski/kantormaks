@@ -9,7 +9,8 @@
     "start": "lerna run start --stream",
     "dev": "lerna run dev --stream",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test": "lerna run test"
   },
   "devDependencies": {
     "eslint": "^9.11.1",
