@@ -14,34 +14,34 @@
     <title>Kantor Maks Wrocław</title>
     <link rel="stylesheet" href="/public/main.css" />
   </head>
-  <body class="container">
-    <header class="grid centered">
+  <body>
+    <header>
       <h1>Kantor Maks Wrocław</h1>
     </header>
     <main>
-      <section class="grid">
-        <address class="centered">
+      <section>
+        <address>
           <p>Ul. Świeradowska 70</p>
           <p>C.H. Gaj</p>
           <p>tel kom. <a href="tel:+48607322363">607 322 363</a></p>
           <p><a href="https://maps.app.goo.gl/cczL3JeF9xQDy8AZ6">Mapa</a></p>
         </address>
-        <div class="centered">
+        <div>
           <p>Godziny otwarcia:</p>
           <p>Poniedziałek - Piątek: 9 - 17</p>
           <p>Sobota: 9 - 13</p>
         </div>
       </section>
-      <section class="grid">
+      <section>
         <span>
-          <h3 class="centered">Tabela kursów detalicznych</h3>
+          <h3>Tabela kursów detalicznych</h3>
           {{#if latestUpdates.retail}}
-          <p class="centered">
+          <p>
             Ostatnia aktualizazja:
             <time>{{formatDate latestUpdates.retail}}</time>
           </p>
           {{/if}}
-          <table class="striped">
+          <table>
             <thead>
               <tr>
                 <th>Kraj</th>
@@ -63,14 +63,14 @@
           </table>
         </span>
         <span>
-          <h3 class="centered">Tabela kursów hurtowych</h3>
+          <h3>Tabela kursów hurtowych</h3>
           {{#if latestUpdates.wholesale}}
-          <p class="centered">
+          <p>
             Ostatnia aktualizazja:
             <time>{{formatDate latestUpdates.wholesale}}</time>
           </p>
           {{/if}}
-          <table class="striped">
+          <table>
             <thead>
               <tr>
                 <th>Kraj</th>
@@ -93,7 +93,7 @@
         </span>
       </section>
     </main>
-    <footer class="centered">
+    <footer>
       <p>
         Kursy walut nie stanowią oferty w rozumieniu prawa i mogą być
         interpretowane wyłącznie jako informacje
