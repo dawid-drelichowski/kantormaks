@@ -3,7 +3,6 @@ import prettier from 'eslint-plugin-prettier'
 import globals from 'globals'
 
 export default [
-  js.configs.recommended,
   {
     files: ['**/*.js'],
     ignores: ['node_modules/**'],
@@ -16,6 +15,7 @@ export default [
       prettier,
     },
     rules: {
+      ...js.configs.recommended.rules,
       'prettier/prettier': 'error',
       'prefer-const': 'error',
     },

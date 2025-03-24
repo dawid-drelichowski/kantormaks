@@ -8,11 +8,13 @@
   "scripts": {
     "start": "lerna run start --stream",
     "dev": "lerna run dev --stream",
-    "lint": "eslint .",
+    "lint": "lerna run lint",
     "format": "prettier --write .",
     "test": "lerna run test"
   },
   "devDependencies": {
+    "@eslint/css": "^0.5.0",
+    "chokidar-cli": "^3.0.0",
     "eslint": "^9.11.1",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.1",
