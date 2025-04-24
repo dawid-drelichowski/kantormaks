@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test'
 import config from '#config'
+import percySnapshot from '@percy/playwright';
 
 test.describe('Admin page', () => {
   const adminUrl = `${config.WEBSITE_URL}/admin`
@@ -40,6 +41,7 @@ test.describe('Admin page', () => {
       expect(await input.inputValue()).toBe(valueToSet)
     }
 
+    await percySnapshot(page, 'Admin page')
     await browser.close()
   })
 })
