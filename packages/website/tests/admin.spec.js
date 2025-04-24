@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 import config from '#config'
-import percySnapshot from '@percy/playwright';
+import percySnapshot from '@percy/playwright'
 
 test.describe('Admin page', () => {
   const adminUrl = `${config.WEBSITE_URL}/admin`

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 import config from '#config'
-import percySnapshot from '@percy/playwright';
+import percySnapshot from '@percy/playwright'
 
 test.describe('Home page', () => {
   test('displays properly', async ({ page }) => {
