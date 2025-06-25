@@ -1,4 +1,4 @@
-name: Integration tests
+name: Test
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  integration-tests:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -37,5 +37,7 @@ jobs:
       - name: Start servers
         run: npm start &
 
-      - name: Run integration tests
-        run: npm test -w packages/website
+      - name: Run tests
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        run: npx percy exec -- npm test -w packages/website
