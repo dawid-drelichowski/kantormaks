@@ -36,7 +36,8 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
+  /* eslint-disable-next-line css/require-baseline */
   overscroll-behavior: none;
 }
 
@@ -48,7 +49,6 @@ body {
   transition: all 0.3s ease;
   max-width: 1200px;
   margin: 0 auto;
-  overscroll-behavior: none;
 }
 
 footer {
