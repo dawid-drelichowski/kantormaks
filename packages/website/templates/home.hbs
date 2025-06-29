@@ -11,86 +11,96 @@
       name="description"
       content="Kantory Maks to kantor wymiany walut, działająca na terenie Wrocławia"
     />
-    <title>Kantor Maks Wrocław</title>
+    <title>Kantor Maks Wrocław - Wymiana walut</title>
     <link rel="stylesheet" href="/public/main.css" />
   </head>
   <body>
-    <header>
-      <h1>Kantor Maks Wrocław</h1>
+    <header class="header">
+      <div class="logo">M</div><h1>Kantor Maks</h1>
     </header>
     <main>
-      <section>
-        <address>
-          <p>Ul. Świeradowska 70</p>
-          <p>C.H. Gaj</p>
-          <p>tel kom. <a href="tel:+48607322363">607 322 363</a></p>
-          <p><a href="https://maps.app.goo.gl/cczL3JeF9xQDy8AZ6">Mapa</a></p>
-        </address>
-        <div>
-          <p>Godziny otwarcia:</p>
-          <p>Poniedziałek - Piątek: 9 - 17</p>
-          <p>Sobota: 9 - 13</p>
+      <section class="info">
+        <div class="info-card">
+          <h3>📍 Lokalizacja</h3>
+          <address>
+            <p><strong>Ul. Świeradowska 70</strong></p>
+            <p>C.H. Gaj</p>
+            <p>📞 telefon <a href="tel:+48607322363">607 322 363</a></p>
+            <p><a href="https://maps.app.goo.gl/cczL3JeF9xQDy8AZ6">🗺️ Zobacz na mapie</a></p>
+          </address>
+        </div>
+        <div class="info-card">
+          <h3>🕒 Godziny otwarcia</h3>
+          <p><strong>Poniedziałek - Piątek:</strong> 9:00 - 17:00</p>
+          <p><strong>Sobota:</strong> 9:00 - 13:00</p>
         </div>
       </section>
       <section>
-        <span>
-          <h3>Tabela kursów detalicznych</h3>
-          {{#if latestUpdates.retail}}
-          <p>
-            Ostatnia aktualizazja:
-            <time>{{formatDate latestUpdates.retail}}</time>
-          </p>
-          {{/if}}
-          <table>
-            <thead>
-              <tr>
-                <th>Kraj</th>
-                <th>Waluta</th>
-                <th>Kupno</th>
-                <th>Sprzedaż</th>
-              </tr>
-            </thead>
-            <tbody>
-              {{#each rates.retail}}
-              <tr>
-                <td>{{country}}</td>
-                <td>{{currency}}</td>
-                <td>{{formatCurrency purchase}}</td>
-                <td>{{formatCurrency sale}}</td>
-              </tr>
-              {{/each}}
-            </tbody>
-          </table>
-        </span>
-        <span>
-          <h3>Tabela kursów hurtowych</h3>
-          {{#if latestUpdates.wholesale}}
-          <p>
-            Ostatnia aktualizazja:
-            <time>{{formatDate latestUpdates.wholesale}}</time>
-          </p>
-          {{/if}}
-          <table>
-            <thead>
-              <tr>
-                <th>Kraj</th>
-                <th>Waluta</th>
-                <th>Kupno</th>
-                <th>Sprzedaż</th>
-              </tr>
-            </thead>
-            <tbody>
-              {{#each rates.wholesale}}
-              <tr>
-                <td>{{country}}</td>
-                <td>{{currency}}</td>
-                <td>{{formatCurrency purchase}}</td>
-                <td>{{formatCurrency sale}}</td>
-              </tr>
-              {{/each}}
-            </tbody>
-          </table>
-        </span>
+        <h2>Aktualne kursy walut</h2>
+        <div class="rates">
+          <div class="rates-card">
+            <header>
+              <h3>Tabela kursów detalicznych</h3>
+              {{#if latestUpdates.retail}}
+              <p>
+                Ostatnia aktualizazja:
+                <time>{{formatDate latestUpdates.retail}}</time>
+              </p>
+              {{/if}}
+            </header>
+            <table>
+              <thead>
+                <tr>
+                  <th>Kraj</th>
+                  <th>Waluta</th>
+                  <th>Kupno</th>
+                  <th>Sprzedaż</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each rates.retail}}
+                <tr>
+                  <td>{{country}}</td>
+                  <td class="currency">{{currency}}</td>
+                  <td class="purchase">{{formatCurrency purchase}}</td>
+                  <td class="sale">{{formatCurrency sale}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+          <div class="rates-card">
+            <header>
+              <h3>Tabela kursów hurtowych</h3>
+              {{#if latestUpdates.wholesale}}
+              <p>
+                Ostatnia aktualizazja:
+                <time>{{formatDate latestUpdates.wholesale}}</time>
+              </p>
+              {{/if}}
+            </header>
+            <table>
+              <thead>
+                <tr>
+                  <th>Kraj</th>
+                  <th>Waluta</th>
+                  <th>Kupno</th>
+                  <th>Sprzedaż</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each rates.wholesale}}
+                <tr>
+                  <td>{{country}}</td>
+                  <td class="currency">{{currency}}</td>
+                  <td class="purchase">{{formatCurrency purchase}}</td>
+                  <td class="sale">{{formatCurrency sale}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
