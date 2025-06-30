@@ -12,6 +12,7 @@
   --success: #166f42;
   --error: #dc2626;
   --accent: #374151;
+  --max-page-width: 1200px;
 }
 
 [data-theme="dark"] {
@@ -46,9 +47,7 @@ body {
   background: var(--background);
   color: var(--text-primary);
   line-height: 1.6;
-  transition: all 0.3s ease;
-  max-width: 1200px;
-  margin: 0 auto;
+  transition: all 0.3s ease; /* maybe remove */
 }
 
 footer {
@@ -56,10 +55,6 @@ footer {
   padding: 2rem 1.25rem;
   background: var(--primary-dark);
   color: white; /*set text color*/
-}
-
-section {
-  padding: 2rem 1.25rem;
 }
 
 h1 {
@@ -128,12 +123,18 @@ td {
   position: sticky;
   top: 0;
   /*z-index: 100;*/
+  /*text-align: center;*/
+
+}
+
+.header-container {
   display: flex;
   gap: 12px;
   /*justify-content: space-between;*/
   align-items: center;
   padding: 1rem 1.25rem;
-  /*text-align: center;*/
+  max-width: var(--max-page-width);
+  margin: 0 auto;
 }
 
 .logo {
@@ -152,12 +153,17 @@ td {
 .info {
   background: var(--primary-dark);
   color: white; /*set text color*/
+  margin-bottom: 3rem;
+  /*overflow: hidden;*/
+}
+
+.info-container {
+  max-width: var(--max-page-width);
   padding: 4rem 1.25rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
-  margin-bottom: 3rem;
-  /*overflow: hidden;*/
+  margin: 0 auto;
 }
 
 .info-card {
@@ -171,6 +177,12 @@ td {
 }
 
 .rates {
+  max-width: var(--max-page-width);
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.rates-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
@@ -214,21 +226,21 @@ td {
     font-size: 2rem;
   }
 
-  .header {
+  .header-container {
     justify-content: center;
   }
 
-  .info, .rates {
+  .info-container, .rates-container {
     grid-template-columns: 1fr;
   }
 
-  .contact-content {
+  /*.contact-content {
     grid-template-columns: 1fr;
   }
 
   .container {
     padding: 0 15px;
-  }
+  }*/
 }
 
 @media (max-width: 480px) {
