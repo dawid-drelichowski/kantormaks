@@ -1,32 +1,29 @@
 :root {
-  --primary-color: #b91c1c;
-  --primary-dark: #991b1b;
-  --secondary-color: #6b7280;
+  --primary-color: #991b1b;
   --background: #ffffff;
-  --surface: #f9fafb;
-  --surface-variant: #e5e7eb;
+  /*--surface: #f9fafb;*/
   --text-primary: #111827;
   --text-secondary: #6b7280;
+  --text-thertiary: #ffffff; /* check if "thertiary" is ok */
   --border: #d1d5db;
-  --shadow: rgba(0, 0, 0, 0.1);
-  --success: #166f42;
-  --accent: #374151;
+  --shadow-primary: rgba(0, 0, 0, 0.1);
+  --shadow-secondary: #374151;
+  --success: #166f42; /* any better name ?*/
+  --min-page-width: 375px;
   --max-page-width: 1200px;
 }
 
 [data-theme="dark"] {
-  --primary-color: #dc2626;
-  --primary-dark: #b91c1c;
-  --secondary-color: #9ca3af;
+  --primary-color: #991b1b;
   --background: #111827;
-  --surface: #1f2937;
-  --surface-variant: #374151;
+  /*--surface: #1f2937;*/
   --text-primary: #f9fafb;
   --text-secondary: #9ca3af;
+  --text-thertiary: #ffffff; /* check if "thertiary" is ok */
   --border: #4b5563;
-  --shadow: rgba(0, 0, 0, 0.3);
+  --shadow-primary: rgba(0, 0, 0, 0.3);
+  --shadow-secondary: #6b7280;
   --success: #166f42;
-  --accent: #6b7280;
 }
 
 * {
@@ -35,9 +32,11 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   /* eslint-disable-next-line css/require-baseline */
   overscroll-behavior: none;
+  min-width: var(--min-page-width);
 }
 
 body {
@@ -50,28 +49,28 @@ body {
 footer {
   text-align: center;
   padding: 2rem 1.25rem;
-  background: var(--primary-dark);
-  color: white; /*set text color*/
+  background: var(--primary-color);
+  color: var(--text-thertiary);
 }
 
 h1 {
-  font-size: 1.5rem;
-  color: var(--primary-dark);
+  font-size: 1.75rem;
+  color: var(--primary-color);
 }
 
 h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 
 h3 {
-  color: var(--primary-dark);
-  font-size: 1.3rem;
+  color: var(--primary-color);
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 a {
-  color: var(--primary-dark);
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -82,7 +81,7 @@ address {
 table {
   width: 100%;
   border-collapse: collapse;
-  background: var(--surface);
+  background: var(--background);
   border-radius: 0 0 1rem 1rem;
 }
 
@@ -96,10 +95,10 @@ tr:hover {
 }
 
 th {
-  background: var(--surface);
+  background: var(--background);
   font-weight: 600;
   color: var(--text-primary);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -110,20 +109,19 @@ td {
 
 th,
 td {
-  padding: .75rem 1rem;
+  padding: 0.5rem;
   text-align: left;
 }
 
 .header {
-  background: var(--surface);
+  background: var(--background);
   position: sticky;
   top: 0;
-
 }
 
 .header-container {
   display: flex;
-  gap: .75rem;
+  gap: 0.75rem;
   align-items: center;
   padding: 1rem 1.25rem;
   max-width: var(--max-page-width);
@@ -133,19 +131,19 @@ td {
 .logo {
   width: 40px;
   height: 40px;
-  background: var(--primary-dark);
-  border-radius: .75rem;
+  background: var(--primary-color);
+  border-radius: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white; /*set text color */
+  color: var(--text-thertiary);
   font-weight: bold;
   font-size: 1.5rem;
 }
 
 .info {
-  background: var(--primary-dark);
-  color: white; /*set text color*/
+  background: var(--primary-color);
+  color: var(--text-thertiary);
 }
 
 .info-container {
@@ -161,7 +159,7 @@ td {
   background: var(--background);
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 16px var(--accent);
+  box-shadow: 0 4px 16px var(--shadow-secondary);
   color: var(--text-secondary);
   width: 100%;
 }
@@ -182,24 +180,24 @@ td {
 .rates-card {
   text-align: center;
   border-radius: 1rem;
-  box-shadow: 0 4px 16px var(--shadow);
+  box-shadow: 0 4px 16px var(--shadow-primary);
   border: 1px solid var(--border);
 }
 
 .rates-card header {
   padding: 1.5rem;
-  background: var(--primary-dark);
-  color: white; /*set text color*/
+  background: var(--primary-color);
+  color: var(--text-thertiary);
   border-radius: 1rem 1rem 0 0;
 }
 
 .rates-card h3 {
-  color: white; /*set text color*/
+  color: var(--text-thertiary);
 }
 
 .currency {
   font-weight: 600;
-  color: var(--primary-dark);
+  color: var(--primary-color);
 }
 
 .purchase {
@@ -209,27 +207,53 @@ td {
 
 .sale {
   font-weight: 600;
-  color: var(--primary-dark);
+  color: var(--primary-color);
 }
 
-@media (max-width: 768px) {
-  h2 {
-    font-size: 2rem;
+@media (max-width: 800px) {
+  th,
+  td {
+    padding: 0.75rem 1rem;
   }
 
   .header-container {
     justify-content: center;
   }
 
-  .info-container, .rates-container {
+  .info-container,
+  .rates-container {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
+
   th,
   td {
-    padding: .5rem .75rem;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+  }
+
+  .info-container {
+    padding: 2rem 1.25rem;
+  }
+
+  .rates {
+    padding: 2rem 1.25rem;
+  }
+
+  .rates-card header {
+    font-size: 0.875rem;
+    padding: 1rem;
   }
 }
