@@ -1,29 +1,25 @@
+/**
+  * @todo: footer sticky bottom
+  */
 :root {
   --primary-color: #991b1b;
-  --background: #ffffff;
-  /*--surface: #f9fafb;*/
+  --background: #fff;
   --text-primary: #111827;
-  --text-secondary: #6b7280;
-  --text-thertiary: #ffffff; /* check if "thertiary" is ok */
+  --text-secondary: #fff;
+  --text-tertiary: #166f42;
   --border: #d1d5db;
-  --shadow-primary: rgba(0, 0, 0, 0.1);
-  --shadow-secondary: #374151;
-  --success: #166f42; /* any better name ?*/
-  --min-page-width: 375px;
+  --shadow-primary: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-secondary: 0 4px 16px #374151;
+  --min-page-width: 400px;
   --max-page-width: 1200px;
 }
 
 [data-theme="dark"] {
-  --primary-color: #991b1b;
   --background: #111827;
-  /*--surface: #1f2937;*/
   --text-primary: #f9fafb;
-  --text-secondary: #9ca3af;
-  --text-thertiary: #ffffff; /* check if "thertiary" is ok */
   --border: #4b5563;
-  --shadow-primary: rgba(0, 0, 0, 0.3);
-  --shadow-secondary: #6b7280;
-  --success: #166f42;
+  --shadow-primary: 0 16px 50px rgba(31, 41, 55, 0.8);
+  --shadow-secondary: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -50,7 +46,7 @@ footer {
   text-align: center;
   padding: 2rem 1.25rem;
   background: var(--primary-color);
-  color: var(--text-thertiary);
+  color: var(--text-secondary);
 }
 
 h1 {
@@ -88,10 +84,6 @@ table {
 thead,
 tr:not(:last-child) {
   border-bottom: 1px solid var(--border);
-}
-
-tr:hover {
-  background: var(--text-secondary); /*set hover color*/
 }
 
 th {
@@ -136,14 +128,14 @@ td {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-thertiary);
+  color: var(--text-secondary);
   font-weight: bold;
   font-size: 1.5rem;
 }
 
 .info {
   background: var(--primary-color);
-  color: var(--text-thertiary);
+  color: var(--text-secondary);
 }
 
 .info-container {
@@ -159,8 +151,8 @@ td {
   background: var(--background);
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 16px var(--shadow-secondary);
-  color: var(--text-secondary);
+  box-shadow: var(--shadow-secondary);
+  color: var(--text-primary);
   width: 100%;
 }
 
@@ -180,19 +172,19 @@ td {
 .rates-card {
   text-align: center;
   border-radius: 1rem;
-  box-shadow: 0 4px 16px var(--shadow-primary);
+  box-shadow: var(--shadow-primary);
   border: 1px solid var(--border);
 }
 
 .rates-card header {
   padding: 1.5rem;
   background: var(--primary-color);
-  color: var(--text-thertiary);
+  color: var(--text-secondary);
   border-radius: 1rem 1rem 0 0;
 }
 
 .rates-card h3 {
-  color: var(--text-thertiary);
+  color: var(--text-secondary);
 }
 
 .currency {
@@ -202,7 +194,7 @@ td {
 
 .purchase {
   font-weight: 600;
-  color: var(--success);
+  color: var(--text-tertiary);
 }
 
 .sale {
