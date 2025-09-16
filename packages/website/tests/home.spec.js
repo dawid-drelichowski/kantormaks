@@ -7,8 +7,8 @@ test.describe('Home page', () => {
     await page.goto(config.WEBSITE_URL)
 
     await expect(page).toHaveTitle('Kantor Maks Wrocław - Wymiana walut')
-    await expect(page.getByText('Tabela kursów detalicznych')).toBeVisible()
-    await expect(page.getByText('Tabela kursów hurtowych')).toBeVisible()
+    await expect(page.getByText('Kursy detaliczne')).toBeVisible()
+    await expect(page.getByText('Kursy hurtowe')).toBeVisible()
     await expect(page.getByRole('row')).toHaveCount(22)
 
     await percySnapshot(page, 'Home page')
