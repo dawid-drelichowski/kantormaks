@@ -17,6 +17,7 @@ handlebars.registerHelper({
       timeStyle: 'short',
     }).format(value),
   currentYear: () => new Date().getFullYear(),
+  googleSiteVerification: () => config.GOOGLE_SITE_VERIFICATION,
 })
 
 export default handlebars
