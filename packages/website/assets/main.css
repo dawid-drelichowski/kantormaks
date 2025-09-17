@@ -33,6 +33,7 @@ body {
   /* eslint-disable-next-line css/require-baseline */
   overscroll-behavior: none;
   min-width: var(--min-page-width);
+  height: 100%;
 }
 
 body {
@@ -40,6 +41,12 @@ body {
   background: var(--background);
   color: var(--text-primary);
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 footer {
