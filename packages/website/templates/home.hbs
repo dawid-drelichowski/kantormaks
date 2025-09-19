@@ -4,7 +4,10 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {{#if (googleSiteVerification)}}
-    <meta name="google-site-verification" content="{{googleSiteVerification}}" />
+    <meta
+      name="google-site-verification"
+      content="{{googleSiteVerification}}"
+    />
     {{/if}}
     <meta
       name="keywords"
@@ -15,15 +18,10 @@
       content="Kantory Maks to kantor wymiany walut, działająca na terenie Wrocławia"
     />
     <title>Kantor Maks Wrocław - Wymiana walut</title>
-    <link rel="stylesheet" href="/public/main.css" />
+    <link rel="stylesheet" href="/public/home.css" />
   </head>
-  <body data-theme="dark">
-    <header class="header">
-      <div class="header-container">
-        <div class="logo">M</div>
-        <h1>Kantor Maks</h1>
-      </div>
-    </header>
+  <body>
+    {{> header}}
     <main>
       <section class="info">
         <div class="info-container">
@@ -117,26 +115,11 @@
         </div>
       </section>
     </main>
-    <footer>
-      <p>
-        Kursy walut nie stanowią oferty w rozumieniu prawa i mogą być
-        interpretowane wyłącznie jako informacje
-      </p>
-      <p>&copy; {{currentYear}} Kantor Maks</p>
-    </footer>
-    <script
-      async
-      defer
-      src="https://scripts.simpleanalyticscdn.com/latest.js"
-      data-collect-dnt="true"
-    ></script>
-    <noscript>
-      <img
-        src="https://queue.simpleanalyticscdn.com/noscript.gif"
-        alt=""
-        referrerpolicy="no-referrer-when-downgrade"
-        data-collect-dnt="true"
-      />
-    </noscript>
+    {{#> footer}}
+    <p>
+      Kursy walut nie stanowią oferty w rozumieniu prawa i mogą być
+      interpretowane wyłącznie jako informacje
+    </p>
+    {{/footer}} {{> tracking}}
   </body>
 </html>

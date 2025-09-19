@@ -1,0 +1,138 @@
+@import "shared.css";
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+address {
+  font-style: normal;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--background);
+  border-radius: 0 0 1rem 1rem;
+}
+
+thead,
+tr:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background: var(--background);
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+td {
+  color: var(--text-primary);
+}
+
+th,
+td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.info {
+  background: var(--primary-color);
+  color: var(--text-secondary);
+}
+
+.info-container {
+  max-width: var(--max-page-width);
+  padding: var(--page-container-padding);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: var(--page-container-margin);
+}
+
+.info-card {
+  background: var(--background);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-secondary);
+  color: var(--text-primary);
+  width: 100%;
+}
+
+.rates {
+  max-width: var(--max-page-width);
+  margin: var(--page-container-margin);
+  padding: var(--page-container-padding);
+}
+
+.rates-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.rates-card {
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-primary);
+  border: 1px solid var(--border);
+}
+
+.rates-card header {
+  padding: 1.5rem;
+  background: var(--primary-color);
+  color: var(--text-secondary);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.rates-card h3 {
+  color: var(--text-secondary);
+}
+
+.currency {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.purchase {
+  font-weight: 600;
+  color: var(--text-tertiary);
+}
+
+.sale {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+@media (max-width: 800px) {
+  th,
+  td {
+    padding: 0.75rem 1rem;
+  }
+
+  .info-container,
+  .rates-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  th,
+  td {
+    font-size: 0.75rem;
+  }
+
+  .rates-card header {
+    font-size: 0.875rem;
+    padding: 1rem;
+  }
+}

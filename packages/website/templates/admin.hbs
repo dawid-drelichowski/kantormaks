@@ -4,21 +4,19 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kantor Maks Wrocław - Panel administratora</title>
-    <link rel="stylesheet" href="/public/main.css" />
+    <link rel="stylesheet" href="/public/admin.css" />
   </head>
   <body>
-    <header>
-      <h1>Kantor Maks Wrocław</h1>
+    {{> header}}
+    <main>
       {{#if success}}
       <h4>Zmiany zostały zapisane</h4>
       {{/if}} {{#if error}}
       <h4>Wystąpił błąd. Zmiany nie zostały zapisane</h4>
       {{/if}}
-    </header>
-    <main>
       <form method="post">
         <section>
-          <h2>Tabela kursów hurtowych</h2>
+          <h2>Kursy detaliczne</h2>
           <table>
             <thead>
               <tr>
@@ -88,7 +86,7 @@
           </table>
         </section>
         <section>
-          <h2>Tabela kursów detalicznych</h2>
+          <h2>Kursy hurtowe</h2>
           <table>
             <thead>
               <tr>
@@ -160,8 +158,6 @@
         <input type="submit" value="Zapisz" />
       </form>
     </main>
-    <footer>
-      <p>&copy; {{currentYear}} Kantor Maks</p>
-    </footer>
+    {{> footer}}
   </body>
 </html>

@@ -5,17 +5,15 @@ import fastifyBasicAuth from '@fastify/basic-auth'
 import fastifyFormBody from '@fastify/formbody'
 import { parse } from 'qs'
 
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
-
 import config from '#config'
-import handlebars from './view/helpers.js'
+import handlebars from './view/partials.js'
 import { isAuthorized } from './authorization.js'
 import { errorHandler } from './error.js'
 import { getRates } from './data/access/rates.js'
 import { getRatesByTypes, updateRates } from './data/transformation/rates.js'
 import { findChangedRates } from './data/comparison/rates.js'
 import { findLatestUpdatesByTypeId } from './data/processing/rates.js'
+import { resolveModulePath } from './path.js'
 
 const fastify = Fastify({
   logger: true,
@@ -33,7 +31,7 @@ const fastify = Fastify({
     },
   })
   .register(fastifyStatic, {
-    root: path.join(path.dirname(fileURLToPath(import.meta.url)), 'public'),
+    root: resolveModulePath(import.meta.url, 'public'),
     prefix: '/public/',
   })
   .setErrorHandler(errorHandler)
