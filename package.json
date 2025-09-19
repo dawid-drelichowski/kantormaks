@@ -10,7 +10,8 @@
     "dev": "lerna run dev --stream",
     "lint": "lerna run lint",
     "format": "prettier --write .",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@percy/cli": "^1.30.10",
@@ -19,7 +20,9 @@
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^16.0.0",
+    "husky": "^9.1.7",
     "lerna": "^8.1.7",
+    "lint-staged": "^16.1.6",
     "prettier": "^3.3.3"
   }
 }
