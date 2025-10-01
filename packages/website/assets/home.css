@@ -5,7 +5,7 @@ h2 {
 }
 
 h3 {
-  color: var(--primary-color);
+  color: var(--color-primary);
   margin-bottom: 1rem;
 }
 
@@ -16,7 +16,7 @@ address {
 table {
   width: 100%;
   border-collapse: collapse;
-  background: var(--background);
+  background: var(--background-color);
   border-radius: 0 0 1rem 1rem;
 }
 
@@ -26,7 +26,7 @@ tr:not(:last-child) {
 }
 
 th {
-  background: var(--background);
+  background: var(--background-color);
   font-weight: 600;
   color: var(--text-primary);
   font-size: 0.875rem;
@@ -45,7 +45,7 @@ td {
 }
 
 .info {
-  background: var(--primary-color);
+  background: var(--color-primary);
   color: var(--text-secondary);
 }
 
@@ -59,7 +59,7 @@ td {
 }
 
 .info-card {
-  background: var(--background);
+  background: var(--background-color);
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: var(--shadow-secondary);
@@ -89,7 +89,7 @@ td {
 
 .rates-card header {
   padding: 1.5rem;
-  background: var(--primary-color);
+  background: var(--color-primary);
   color: var(--text-secondary);
   border-radius: 1rem 1rem 0 0;
 }
@@ -100,17 +100,17 @@ td {
 
 .currency {
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--color-primary);
 }
 
 .purchase {
   font-weight: 600;
-  color: var(--text-tertiary);
+  color: var(--color-green);
 }
 
 .sale {
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--color-primary);
 }
 
 @media (max-width: 800px) {

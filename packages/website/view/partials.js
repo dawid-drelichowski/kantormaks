@@ -13,6 +13,7 @@ handlebars.registerPartial({
   header: getPartialContent('header.hbs'),
   footer: getPartialContent('footer.hbs'),
   tracking: getPartialContent('tracking.hbs'),
+  toast: getPartialContent('toast.hbs'),
 })
 
 export default handlebars
