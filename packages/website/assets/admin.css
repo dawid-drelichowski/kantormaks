@@ -1,2 +1,7 @@
 @import "shared.css";
 @import "toast.css";
+
+main {
+  margin: auto;
+  text-align: center;
+}
