@@ -1,3 +1,5 @@
 .env
-public/
+public/*
+!public/favicon.ico
+!public/favicon.png
 test-results/
