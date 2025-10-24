@@ -11,6 +11,7 @@ export default [
     language: 'css/css',
     rules: {
       ...css.configs.recommended.rules,
+      'css/no-invalid-properties': 'off',
     },
   },
 ]

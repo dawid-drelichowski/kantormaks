@@ -37,7 +37,7 @@
 
 html,
 body {
-  /* eslint-disable-next-line css/require-baseline */
+  /* eslint-disable-next-line css/use-baseline */
   overscroll-behavior: none;
   min-width: var(--min-page-width);
   height: 100%;

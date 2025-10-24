@@ -25,7 +25,7 @@ body.error .toast.error {
 }
 
 @supports (view-transition-name: none) {
-  /* eslint-disable-next-line css/require-baseline */
+  /* eslint-disable-next-line css/use-baseline */
   @view-transition {
     navigation: auto;
   }
