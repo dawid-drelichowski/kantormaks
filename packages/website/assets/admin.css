@@ -1,7 +1,29 @@
 @import "shared.css";
 @import "toast.css";
 
-main {
-  margin: auto;
+h2 {
   text-align: center;
+}
+
+.rates {
+  max-width: var(--max-page-width);
+  margin: var(--page-container-margin);
+  padding: var(--page-container-padding);
+}
+
+.rates-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.rates-card header {
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .rates-container {
+    grid-template-columns: 1fr;
+  }
 }
