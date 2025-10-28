@@ -1,9 +1,7 @@
 <!doctype html>
 <html lang="{{language}}">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {{#if (googleSiteVerification)}}
+    {{#> meta}} {{#if (googleSiteVerification)}}
     <meta
       name="google-site-verification"
       content="{{googleSiteVerification}}"
@@ -18,8 +16,8 @@
       content="Kantory Maks to kantor wymiany walut, działająca na terenie Wrocławia"
     />
     <title>Kantor Maks Wrocław - Wymiana walut</title>
-    <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
     <link rel="stylesheet" href="/public/home.css" />
+    {{/meta}}
   </head>
   <body>
     {{> header}}

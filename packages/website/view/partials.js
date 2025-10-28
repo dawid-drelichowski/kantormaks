@@ -14,6 +14,7 @@ handlebars.registerPartial({
   footer: getPartialContent('footer.hbs'),
   tracking: getPartialContent('tracking.hbs'),
   toast: getPartialContent('toast.hbs'),
+  meta: getPartialContent('meta.hbs'),
 })
 
 export default handlebars
