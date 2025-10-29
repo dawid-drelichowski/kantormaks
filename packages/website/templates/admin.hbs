@@ -10,16 +10,14 @@
     {{> toast}}
     {{> header}}
     <main>
-      <header>
+      <section class="info">
         <h2>Panel administratora</h2>
-      </header>
+      </section>
       <section class="rates">
         <form method="post">
           <div class="rates-container">
             <div class="rates-card">
-              <header>
-                <h3>Kursy detaliczne</h3>
-              </header>
+              <h3>Kursy detaliczne</h3>
               <table>
                 <thead>
                   <tr>
@@ -61,6 +59,7 @@
                         name="retail[{{@index}}][currency]"
                         required
                         value="{{currency}}"
+                        class="currency"
                       />
                     </td>
                     <td>
@@ -71,6 +70,7 @@
                         step="0.0001"
                         min="0"
                         value="{{purchase}}"
+                        class="purchase"
                       />
                     </td>
                     <td>
@@ -81,6 +81,7 @@
                         step="0.0001"
                         min="0"
                         value="{{sale}}"
+                        class="sale"
                       />
                     </td>
                   </tr>
@@ -89,9 +90,7 @@
               </table>
             </div>
             <div class="rates-card">
-              <header>
-                <h3>Kursy hurtowe</h3>
-              </header>
+              <h3>Kursy hurtowe</h3>
               <table>
                 <thead>
                   <tr>
@@ -133,6 +132,7 @@
                         name="wholesale[{{@index}}][currency]"
                         required
                         value="{{currency}}"
+                        class="currency"
                       />
                     </td>
                     <td>
@@ -143,6 +143,7 @@
                         step="0.0001"
                         min="0"
                         value="{{purchase}}"
+                        class="purchase"
                       />
                     </td>
                     <td>
@@ -153,6 +154,7 @@
                         step="0.0001"
                         min="0"
                         value="{{sale}}"
+                        class="sale"
                       />
                     </td>
                   </tr>

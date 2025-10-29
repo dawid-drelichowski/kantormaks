@@ -4,7 +4,7 @@
   "description": "Kantormaks website based on Fastify",
   "scripts": {
     "start": "node server.js",
-    "dev": "node --watch server.js",
+    "dev": "node --watch server.js & npm run assets:dev",
     "assets:build": "lightningcss --minify --sourcemap assets/*.css --output-dir public",
     "assets:dev": "chokidar 'assets/*.css' -c 'lightningcss {path} --output-dir public'",
     "lint": "eslint .",
