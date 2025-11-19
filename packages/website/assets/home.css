@@ -27,7 +27,6 @@ tr:not(:last-child) {
 
 th {
   background: var(--background-color);
-  font-weight: 600;
   color: var(--text-primary);
   font-size: 0.875rem;
   text-transform: uppercase;
@@ -42,6 +41,7 @@ th,
 td {
   padding: 0.5rem;
   text-align: left;
+  font-weight: var(--font-semi-bold);
 }
 
 .info {
@@ -99,17 +99,14 @@ td {
 }
 
 .currency {
-  font-weight: 600;
   color: var(--color-primary);
 }
 
 .purchase {
-  font-weight: 600;
   color: var(--color-green);
 }
 
 .sale {
-  font-weight: 600;
   color: var(--color-primary);
 }
 

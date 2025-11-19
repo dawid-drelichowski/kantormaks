@@ -5,6 +5,7 @@
   --text-primary: #111827;
   --text-secondary: #fff;
   --border: #d1d5db;
+  --font-semi-bold: 600;
   --shadow-primary: 0 4px 16px rgba(0, 0, 0, 0.1);
   --shadow-secondary: 0 4px 16px #374151;
   --min-page-width: 400px;
@@ -105,7 +106,7 @@ a {
   align-items: center;
   justify-content: center;
   color: var(--text-secondary);
-  font-weight: bold;
+  font-weight: var(--font-semi-bold);
   font-size: 1.5rem;
 }
 
