@@ -65,6 +65,17 @@ input.purchase {
   color: var(--color-green);
 }
 
+input.submit {
+  background: var(--color-primary);
+  color: var(--text-secondary);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.625rem 1rem;
+  font-size: 1rem;
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+}
+
 .info {
   max-width: var(--max-page-width);
   padding: var(--page-container-padding);
@@ -87,6 +98,11 @@ input.purchase {
 
 .rates-card header {
   text-align: center;
+}
+
+.action-container {
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
 @media (max-width: 800px) {
