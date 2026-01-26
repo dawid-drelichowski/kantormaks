@@ -1,5 +1,7 @@
 .env
 public/*
 !public/icons
-!public/js
+!public/css
+public/css/*
+!public/css/.gitkeep
 test-results/
