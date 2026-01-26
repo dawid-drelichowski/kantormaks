@@ -1,0 +1,31 @@
+@import "shared.css";
+
+.icon {
+  background-color: var(--color-primary);
+  width: 1.5rem;
+  height: 1.5rem;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.icon.small {
+  width: 1em;
+  height: 1em;
+}
+
+.clock-check {
+  mask-image: url("/public/icons/clock-check.svg");
+}
+
+.map-pin {
+  mask-image: url("/public/icons/map-pin.svg");
+}
+
+.phone-call {
+  mask-image: url("/public/icons/phone-call.svg");
+}
+
+.map {
+  mask-image: url("/public/icons/map.svg");
+}

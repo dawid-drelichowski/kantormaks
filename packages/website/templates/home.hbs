@@ -16,7 +16,7 @@
       content="Kantory Maks to kantor wymiany walut, działająca na terenie Wrocławia"
     />
     <title>Kantor Maks Wrocław - Wymiana walut</title>
-    <link rel="stylesheet" href="/public/home.css" />
+    <link rel="stylesheet" href="/public/css/home.css" />
     {{/meta}}
   </head>
   <body>
@@ -25,22 +25,25 @@
       <section class="info">
         <div class="info-container">
           <div class="info-card">
-            <h3>📍 Lokalizacja</h3>
+            <h3><span class="icon map-pin"></span> Lokalizacja</h3>
             <address>
               <p><strong>Ul. Świeradowska 70</strong></p>
               <p>C.H. Gaj</p>
-              <p>📞 telefon <a href="tel:+48607322363">607 322 363</a></p>
               <p>
+                <span class="icon small phone-call"></span>telefon<a href="tel:+48607322363">607 322 363</a>
+              </p>
+              <p>
+                <span class="icon small map"></span>
                 <a
                   href="https://maps.app.goo.gl/cczL3JeF9xQDy8AZ6"
                   target="_blank"
-                  >🗺️ Zobacz na mapie</a
+                  >Zobacz na mapie</a
                 >
               </p>
             </address>
           </div>
           <div class="info-card">
-            <h3>🕒 Godziny otwarcia</h3>
+            <h3><span class="icon clock-check"></span> Godziny otwarcia</h3>
             <p><strong>Poniedziałek - Piątek:</strong> 9:00 - 17:00</p>
             <p><strong>Sobota:</strong> 9:00 - 13:00</p>
           </div>
@@ -119,6 +122,7 @@
       Kursy walut nie stanowią oferty w rozumieniu prawa i mogą być
       interpretowane wyłącznie jako informacje
     </p>
-    {{/footer}} {{> tracking}}
+    {{/footer}}
+    {{> tracking}}
   </body>
 </html>
