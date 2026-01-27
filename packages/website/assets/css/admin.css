@@ -17,6 +17,7 @@ table {
   border: 1px solid var(--border);
   margin: auto;
   overflow: hidden;
+  box-shadow: var(--shadow-primary);
 }
 
 thead th,
@@ -91,7 +92,7 @@ input.submit {
 
 .rates-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: var(--page-grid-template-columns);
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -107,6 +108,6 @@ input.submit {
 
 @media (max-width: 800px) {
   .rates-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: var(--page-grid-template-columns);
   }
 }

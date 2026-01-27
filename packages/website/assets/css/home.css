@@ -60,10 +60,7 @@ h3 .icon {
   max-width: var(--max-page-width);
   padding: var(--page-container-padding);
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(350px, 1fr)
-  ); /* 350px as variable */
+  grid-template-columns: var(--page-grid-template-columns);
   gap: 2rem;
   margin: var(--page-container-margin);
 }
@@ -91,7 +88,7 @@ h3 .icon {
 
 .rates-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: var(--page-grid-template-columns);
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -112,6 +109,7 @@ h3 .icon {
 
 .rates-card h3 {
   color: var(--text-secondary);
+  justify-content: center;
 }
 
 .currency {
@@ -134,7 +132,7 @@ h3 .icon {
 
   .info-container,
   .rates-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: var(--page-grid-template-columns);
   }
 }
 

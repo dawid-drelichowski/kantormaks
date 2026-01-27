@@ -11,8 +11,9 @@ body.error .toast.error {
   right: 20px;
   border-radius: 0.5rem;
   padding: 1rem 1.25rem;
-  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
-  max-width: 350px;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-secondary);
+  max-width: var(--page-min-column-width);
   z-index: 1;
   transform: translateY(-120px);
   transition: transform 1.2s ease-out;
