@@ -1,0 +1,113 @@
+@import "shared.css";
+@import "toast.css";
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  margin: auto;
+  overflow: hidden;
+  box-shadow: var(--shadow-primary);
+}
+
+thead th,
+tbody tr:not(:last-child) td {
+  border-bottom: 1px solid var(--border);
+}
+
+/* same as in home.css */
+th {
+  background: var(--background-color);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+/* end of same as in home.css */
+
+th,
+td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+input.country,
+input.currency,
+input.purchase,
+input.sale {
+  width: 100%;
+  background: var(--background-color);
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: var(--font-semi-bold);
+}
+
+input.country {
+  color: var(--text-primary);
+}
+
+input.currency,
+input.sale {
+  color: var(--color-primary);
+}
+
+input.purchase {
+  color: var(--color-green);
+}
+
+input.submit {
+  background: var(--color-primary);
+  color: var(--text-secondary);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.625rem 1rem;
+  font-size: 1rem;
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+}
+
+.info {
+  max-width: var(--max-page-width);
+  padding: var(--page-container-padding);
+  margin: var(--page-container-margin);
+  padding-bottom: 0;
+}
+
+.rates {
+  max-width: var(--max-page-width);
+  margin: var(--page-container-margin);
+  padding: var(--page-container-padding);
+}
+
+.rates-container {
+  display: grid;
+  grid-template-columns: var(--page-grid-template-columns);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.rates-card header {
+  text-align: center;
+}
+
+.action-container {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .rates-container {
+    grid-template-columns: var(--page-grid-template-columns);
+  }
+}

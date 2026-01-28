@@ -1,0 +1,13 @@
+@import "shared.css";
+
+main {
+  max-width: var(--max-page-width);
+  padding: var(--page-container-padding);
+  margin: var(--page-container-margin);
+  width: 100%;
+}
+
+h2 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}

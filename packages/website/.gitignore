@@ -1,3 +1,7 @@
 .env
-public/
+public/*
+!public/icons
+!public/css
+public/css/*
+!public/css/.gitkeep
 test-results/

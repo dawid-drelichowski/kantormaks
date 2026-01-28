@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="{{language}}">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {{#if (googleSiteVerification)}}
-    <meta name="google-site-verification" content="{{googleSiteVerification}}" />
+    {{#> meta}} {{#if (googleSiteVerification)}}
+    <meta
+      name="google-site-verification"
+      content="{{googleSiteVerification}}"
+    />
     {{/if}}
     <meta
       name="keywords"
@@ -14,108 +15,114 @@
       name="description"
       content="Kantory Maks to kantor wymiany walut, działająca na terenie Wrocławia"
     />
-    <title>Kantor Maks Wrocław</title>
-    <link rel="stylesheet" href="/public/main.css" />
+    <title>Kantor Maks Wrocław - Wymiana walut</title>
+    <link rel="stylesheet" href="/public/css/home.css" />
+    {{/meta}}
   </head>
-  <body class="container">
-    <header class="grid centered">
-      <h1>Kantor Maks Wrocław</h1>
-    </header>
+  <body>
+    {{> header}}
     <main>
-      <section class="grid">
-        <address class="centered">
-          <p>Ul. Świeradowska 70</p>
-          <p>C.H. Gaj</p>
-          <p>tel kom. <a href="tel:+48607322363">607 322 363</a></p>
-          <p><a href="https://maps.app.goo.gl/cczL3JeF9xQDy8AZ6">Mapa</a></p>
-        </address>
-        <div class="centered">
-          <p>Godziny otwarcia:</p>
-          <p>Poniedziałek - Piątek: 9 - 17</p>
-          <p>Sobota: 9 - 13</p>
+      <section class="info">
+        <div class="info-container">
+          <div class="info-card">
+            <h3><span class="icon map-pin"></span> Lokalizacja</h3>
+            <address>
+              <p><strong>Ul. Świeradowska 70</strong></p>
+              <p>C.H. Gaj</p>
+              <p>
+                <span class="icon small phone-call"></span>telefon<a href="tel:+48607322363">607 322 363</a>
+              </p>
+              <p>
+                <span class="icon small map"></span>
+                <a
+                  href="https://maps.app.goo.gl/cczL3JeF9xQDy8AZ6"
+                  target="_blank"
+                  >Zobacz na mapie</a
+                >
+              </p>
+            </address>
+          </div>
+          <div class="info-card">
+            <h3><span class="icon clock-check"></span> Godziny otwarcia</h3>
+            <p><strong>Poniedziałek - Piątek:</strong> 9:00 - 17:00</p>
+            <p><strong>Sobota:</strong> 9:00 - 13:00</p>
+          </div>
         </div>
       </section>
-      <section class="grid">
-        <span>
-          <h3 class="centered">Tabela kursów detalicznych</h3>
-          {{#if latestUpdates.retail}}
-          <p class="centered">
-            Ostatnia aktualizazja:
-            <time>{{formatDate latestUpdates.retail}}</time>
-          </p>
-          {{/if}}
-          <table class="striped">
-            <thead>
-              <tr>
-                <th>Kraj</th>
-                <th>Waluta</th>
-                <th>Kupno</th>
-                <th>Sprzedaż</th>
-              </tr>
-            </thead>
-            <tbody>
-              {{#each rates.retail}}
-              <tr>
-                <td>{{country}}</td>
-                <td>{{currency}}</td>
-                <td>{{formatCurrency purchase}}</td>
-                <td>{{formatCurrency sale}}</td>
-              </tr>
-              {{/each}}
-            </tbody>
-          </table>
-        </span>
-        <span>
-          <h3 class="centered">Tabela kursów hurtowych</h3>
-          {{#if latestUpdates.wholesale}}
-          <p class="centered">
-            Ostatnia aktualizazja:
-            <time>{{formatDate latestUpdates.wholesale}}</time>
-          </p>
-          {{/if}}
-          <table class="striped">
-            <thead>
-              <tr>
-                <th>Kraj</th>
-                <th>Waluta</th>
-                <th>Kupno</th>
-                <th>Sprzedaż</th>
-              </tr>
-            </thead>
-            <tbody>
-              {{#each rates.wholesale}}
-              <tr>
-                <td>{{country}}</td>
-                <td>{{currency}}</td>
-                <td>{{formatCurrency purchase}}</td>
-                <td>{{formatCurrency sale}}</td>
-              </tr>
-              {{/each}}
-            </tbody>
-          </table>
-        </span>
+      <section class="rates">
+        <h2>Aktualne kursy walut</h2>
+        <div class="rates-container">
+          <div class="rates-card">
+            <header>
+              <h3>Kursy detaliczne</h3>
+              {{#if latestUpdates.retail}}
+              <p>
+                Ostatnia aktualizazja:
+                <time>{{formatDate latestUpdates.retail}}</time>
+              </p>
+              {{/if}}
+            </header>
+            <table>
+              <thead>
+                <tr>
+                  <th>Kraj</th>
+                  <th>Waluta</th>
+                  <th>Kupno</th>
+                  <th>Sprzedaż</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each rates.retail}}
+                <tr>
+                  <td>{{country}}</td>
+                  <td class="currency">{{currency}}</td>
+                  <td class="purchase">{{formatCurrency purchase}}</td>
+                  <td class="sale">{{formatCurrency sale}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+          <div class="rates-card">
+            <header>
+              <h3>Kursy hurtowe</h3>
+              {{#if latestUpdates.wholesale}}
+              <p>
+                Ostatnia aktualizazja:
+                <time>{{formatDate latestUpdates.wholesale}}</time>
+              </p>
+              {{/if}}
+            </header>
+            <table>
+              <thead>
+                <tr>
+                  <th>Kraj</th>
+                  <th>Waluta</th>
+                  <th>Kupno</th>
+                  <th>Sprzedaż</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each rates.wholesale}}
+                <tr>
+                  <td>{{country}}</td>
+                  <td class="currency">{{currency}}</td>
+                  <td class="purchase">{{formatCurrency purchase}}</td>
+                  <td class="sale">{{formatCurrency sale}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
     </main>
-    <footer class="centered">
-      <p>
-        Kursy walut nie stanowią oferty w rozumieniu prawa i mogą być
-        interpretowane wyłącznie jako informacje
-      </p>
-      <p>&copy; {{currentYear}} Kantor Maks</p>
-    </footer>
-    <script
-      async
-      defer
-      src="https://scripts.simpleanalyticscdn.com/latest.js"
-      data-collect-dnt="true"
-    ></script>
-    <noscript>
-      <img
-        src="https://queue.simpleanalyticscdn.com/noscript.gif"
-        alt=""
-        referrerpolicy="no-referrer-when-downgrade"
-        data-collect-dnt="true"
-      />
-    </noscript>
+    {{#> footer}}
+    <p>
+      Kursy walut nie stanowią oferty w rozumieniu prawa i mogą być
+      interpretowane wyłącznie jako informacje
+    </p>
+    {{/footer}}
+    {{> tracking}}
   </body>
 </html>

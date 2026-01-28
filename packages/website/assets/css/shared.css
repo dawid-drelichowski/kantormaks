@@ -1,0 +1,142 @@
+:root {
+  --color-primary: #991b1b;
+  --color-green: #166f42;
+  --background-color: #fff;
+  --text-primary: #111827;
+  --text-secondary: #fff;
+  --border: #d1d5db;
+  --font-semi-bold: 600;
+  --shadow-primary: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-secondary: 0 4px 16px #374151;
+  --min-page-width: 400px;
+  --max-page-width: 1200px;
+  --page-container-margin: 0 auto;
+  --page-container-padding: 4rem 1.25rem;
+  --page-min-column-width: 350px;
+  --page-grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--page-min-column-width), 1fr)
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #111827;
+    --text-primary: #f9fafb;
+    --border: #4b5563;
+    --shadow-primary: 0 16px 50px rgba(31, 41, 55, 0.8);
+    --shadow-secondary: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    --page-grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    --page-container-padding: 2rem 1.25rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  /* eslint-disable-next-line css/use-baseline */
+  overscroll-behavior: none;
+  min-width: var(--min-page-width);
+  height: 100%;
+}
+
+body {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1.25rem;
+  background: var(--color-primary);
+  color: var(--text-secondary);
+}
+
+h1 {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.header {
+  background: var(--background-color);
+  position: sticky;
+  top: 0;
+}
+
+.header-container {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  max-width: var(--max-page-width);
+  margin: var(--page-container-margin);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-weight: var(--font-semi-bold);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .header-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
+}

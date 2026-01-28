@@ -1,5 +1,4 @@
 import handlebars from 'handlebars'
-
 import config from '#config'
 
 const locale = config.WEBSITE_LOCALE

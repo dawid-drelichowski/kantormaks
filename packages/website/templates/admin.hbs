@@ -1,169 +1,176 @@
 <!doctype html>
 <html lang="{{language}}">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kantor Maks Wrocław - Panel administratora</title>
-    <link rel="stylesheet" href="/public/main.css" />
+    {{#> meta}}
+      <title>Kantor Maks Wrocław - Panel administratora</title>
+      <link rel="stylesheet" href="/public/css/admin.css" />
+    {{/meta}}
   </head>
-  <body class="container">
-    <header>
-      <h1 class="centered">Kantor Maks Wrocław</h1>
-      {{#if success}}
-      <h4 class="centered success">Zmiany zostały zapisane</h4>
-      {{/if}} {{#if error}}
-      <h4 class="centered failure">
-        Wystąpił błąd. Zmiany nie zostały zapisane
-      </h4>
-      {{/if}}
-    </header>
+  <body {{#if success}}class="success"{{/if}}{{#if error}}class="error"{{/if}}>
+    {{> toast}}
+    {{> header}}
     <main>
-      <form method="post">
-        <section>
-          <h2 class="centered">Tabela kursów hurtowych</h2>
-          <table class="striped">
-            <thead>
-              <tr>
-                <th>Kraj</th>
-                <th>Waluta</th>
-                <th>Kupno</th>
-                <th>Sprzedaż</th>
-              </tr>
-            </thead>
-            <tbody>
-              {{#each wholesale}}
-              <tr>
-                <td>
-                  <input
-                    type="hidden"
-                    name="wholesale[{{@index}}][id]"
-                    value="{{id}}"
-                  />
-                  <input
-                    type="hidden"
-                    name="wholesale[{{@index}}][typeId]"
-                    value="{{typeId}}"
-                  />
-                  <input
-                    type="hidden"
-                    name="wholesale[{{@index}}][timestamp]"
-                    value="{{timestamp}}"
-                  />
-                  <input
-                    type="text"
-                    name="wholesale[{{@index}}][country]"
-                    required
-                    value="{{country}}"
-                  />
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    name="wholesale[{{@index}}][currency]"
-                    required
-                    value="{{currency}}"
-                  />
-                </td>
-                <td>
-                  <input
-                    type="number"
-                    name="wholesale[{{@index}}][purchase]"
-                    required
-                    step="0.0001"
-                    min="0"
-                    value="{{purchase}}"
-                  />
-                </td>
-                <td>
-                  <input
-                    type="number"
-                    name="wholesale[{{@index}}][sale]"
-                    required
-                    step="0.0001"
-                    min="0"
-                    value="{{sale}}"
-                  />
-                </td>
-              </tr>
-              {{/each}}
-            </tbody>
-          </table>
-        </section>
-        <section>
-          <h2 class="centered">Tabela kursów detalicznych</h2>
-          <table class="striped">
-            <thead>
-              <tr>
-                <th>Kraj</th>
-                <th>Waluta</th>
-                <th>Kupno</th>
-                <th>Sprzedaż</th>
-              </tr>
-            </thead>
-            <tbody>
-              {{#each retail}}
-              <tr>
-                <td>
-                  <input
-                    type="hidden"
-                    name="retail[{{@index}}][id]"
-                    value="{{id}}"
-                  />
-                  <input
-                    type="hidden"
-                    name="retail[{{@index}}][typeId]"
-                    value="{{typeId}}"
-                  />
-                  <input
-                    type="hidden"
-                    name="retail[{{@index}}][timestamp]"
-                    value="{{timestamp}}"
-                  />
-                  <input
-                    type="text"
-                    name="retail[{{@index}}][country]"
-                    required
-                    value="{{country}}"
-                  />
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    name="retail[{{@index}}][currency]"
-                    required
-                    value="{{currency}}"
-                  />
-                </td>
-                <td>
-                  <input
-                    type="number"
-                    name="retail[{{@index}}][purchase]"
-                    required
-                    step="0.0001"
-                    min="0"
-                    value="{{purchase}}"
-                  />
-                </td>
-                <td>
-                  <input
-                    type="number"
-                    name="retail[{{@index}}][sale]"
-                    required
-                    step="0.0001"
-                    min="0"
-                    value="{{sale}}"
-                  />
-                </td>
-              </tr>
-              {{/each}}
-            </tbody>
-          </table>
-        </section>
-        <input type="submit" value="Zapisz" class="save-button" />
-      </form>
+      <section class="info">
+        <h2>Panel administratora</h2>
+      </section>
+      <section class="rates">
+        <form method="post">
+          <div class="rates-container">
+            <div class="rates-card">
+              <h3>Kursy detaliczne</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Kraj</th>
+                    <th>Waluta</th>
+                    <th>Kupno</th>
+                    <th>Sprzedaż</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {{#each retail}}
+                  <tr>
+                    <td>
+                      <input
+                        type="hidden"
+                        name="retail[{{@index}}][id]"
+                        value="{{id}}"
+                      />
+                      <input
+                        type="hidden"
+                        name="retail[{{@index}}][typeId]"
+                        value="{{typeId}}"
+                      />
+                      <input
+                        type="hidden"
+                        name="retail[{{@index}}][timestamp]"
+                        value="{{timestamp}}"
+                      />
+                      <input
+                        type="text"
+                        name="retail[{{@index}}][country]"
+                        required
+                        value="{{country}}"
+                        class="country"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name="retail[{{@index}}][currency]"
+                        required
+                        value="{{currency}}"
+                        class="currency"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="retail[{{@index}}][purchase]"
+                        required
+                        step="0.0001"
+                        min="0"
+                        value="{{purchase}}"
+                        class="purchase"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="retail[{{@index}}][sale]"
+                        required
+                        step="0.0001"
+                        min="0"
+                        value="{{sale}}"
+                        class="sale"
+                      />
+                    </td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+            <div class="rates-card">
+              <h3>Kursy hurtowe</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Kraj</th>
+                    <th>Waluta</th>
+                    <th>Kupno</th>
+                    <th>Sprzedaż</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {{#each wholesale}}
+                  <tr>
+                    <td>
+                      <input
+                        type="hidden"
+                        name="wholesale[{{@index}}][id]"
+                        value="{{id}}"
+                      />
+                      <input
+                        type="hidden"
+                        name="wholesale[{{@index}}][typeId]"
+                        value="{{typeId}}"
+                      />
+                      <input
+                        type="hidden"
+                        name="wholesale[{{@index}}][timestamp]"
+                        value="{{timestamp}}"
+                      />
+                      <input
+                        type="text"
+                        name="wholesale[{{@index}}][country]"
+                        required
+                        value="{{country}}"
+                        class="country"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        name="wholesale[{{@index}}][currency]"
+                        required
+                        value="{{currency}}"
+                        class="currency"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="wholesale[{{@index}}][purchase]"
+                        required
+                        step="0.0001"
+                        min="0"
+                        value="{{purchase}}"
+                        class="purchase"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="wholesale[{{@index}}][sale]"
+                        required
+                        step="0.0001"
+                        min="0"
+                        value="{{sale}}"
+                        class="sale"
+                      />
+                    </td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="action-container">
+            <input type="submit" class="submit" value="Zapisz" />
+          </div>
+        </form>
+      </section>
     </main>
-    <footer class="centered">
-      <p>&copy; {{currentYear}} Kantor Maks</p>
-    </footer>
+    {{> footer}}
   </body>
 </html>

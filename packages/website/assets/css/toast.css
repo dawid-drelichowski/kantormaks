@@ -1,0 +1,54 @@
+@import "shared.css";
+
+body.success .toast.success,
+body.error .toast.error {
+  transform: translateY(0);
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-secondary);
+  max-width: var(--page-min-column-width);
+  z-index: 1;
+  transform: translateY(-120px);
+  transition: transform 1.2s ease-out;
+}
+
+.toast.success {
+  background: var(--color-green);
+}
+
+.toast.error {
+  background: var(--color-primary);
+}
+
+.toast-container {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: -0.75rem;
+  top: -1rem;
+  color: var(--text-secondary);
+}
+
+@supports (view-transition-name: none) {
+  /* eslint-disable-next-line css/use-baseline */
+  @view-transition {
+    navigation: auto;
+  }
+
+  .toast.success {
+    view-transition-name: toast-success;
+  }
+
+  .toast.error {
+    view-transition-name: toast-error;
+  }
+}
