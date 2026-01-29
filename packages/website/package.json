@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js & npm run assets:dev",
-    "assets:build": "lightningcss --minify --sourcemap assets/css/*.css --output-dir public/css",
+    "assets:build": "glob-exec --foreach --parallel \"assets/css/{home,error,admin}.css\" -- \"lightningcss --bundle --minify --sourcemap {{file}} -o public/css/{{file.base}}\"",
     "assets:dev": "chokidar 'assets/css/*.css' -c 'lightningcss {path} --output-dir public/css'",
     "lint": "eslint .",
     "test": "playwright install chromium && playwright test"
@@ -29,6 +29,7 @@
   "devDependencies": {
     "@playwright/test": "^1.47.2",
     "@types/node": "^24.0.3",
+    "glob-exec": "^0.1.1",
     "lightningcss-cli": "^1.27.0"
   }
 }
