@@ -14,7 +14,7 @@ body.error .toast.error {
   color: var(--text-secondary);
   box-shadow: var(--shadow-secondary);
   max-width: var(--page-min-column-width);
-  z-index: 1;
+  z-index: 2;
   transform: translateY(-120px);
   transition: transform 1.2s ease-out;
 }

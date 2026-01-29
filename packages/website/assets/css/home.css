@@ -51,6 +51,12 @@ h3 .icon {
   margin-right: 0.25rem;
 }
 
+p:has(.icon) {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 .info {
   background: var(--color-primary);
   color: var(--text-secondary);
@@ -72,12 +78,6 @@ h3 .icon {
   box-shadow: var(--shadow-secondary);
   color: var(--text-primary);
   width: 100%;
-}
-
-.info-card p {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
 }
 
 .rates {
@@ -140,6 +140,7 @@ h3 .icon {
   th,
   td {
     font-size: 0.75rem;
+    padding: 0.5rem;
   }
 
   .rates-card header {
