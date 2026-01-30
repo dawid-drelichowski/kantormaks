@@ -98,6 +98,7 @@ p:has(.icon) {
   border-radius: 1rem;
   box-shadow: var(--shadow-primary);
   border: 1px solid var(--border);
+  align-self: start;
 }
 
 .rates-card header {
