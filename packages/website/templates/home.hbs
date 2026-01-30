@@ -54,41 +54,10 @@
         <div class="rates-container">
           <div class="rates-card">
             <header>
-              <h3>Kursy detaliczne</h3>
-              {{#if latestUpdates.retail}}
-              <p>
-                Ostatnia aktualizazja:
-                <time>{{formatDate latestUpdates.retail}}</time>
-              </p>
-              {{/if}}
-            </header>
-            <table>
-              <thead>
-                <tr>
-                  <th>Kraj</th>
-                  <th>Waluta</th>
-                  <th>Kupno</th>
-                  <th>Sprzedaż</th>
-                </tr>
-              </thead>
-              <tbody>
-                {{#each rates.retail}}
-                <tr>
-                  <td>{{country}}</td>
-                  <td class="currency">{{currency}}</td>
-                  <td class="purchase">{{formatCurrency purchase}}</td>
-                  <td class="sale">{{formatCurrency sale}}</td>
-                </tr>
-                {{/each}}
-              </tbody>
-            </table>
-          </div>
-          <div class="rates-card">
-            <header>
               <h3>Kursy hurtowe</h3>
               {{#if latestUpdates.wholesale}}
               <p>
-                Ostatnia aktualizazja:
+                Ostatnia aktualizacja:
                 <time>{{formatDate latestUpdates.wholesale}}</time>
               </p>
               {{/if}}
@@ -104,6 +73,37 @@
               </thead>
               <tbody>
                 {{#each rates.wholesale}}
+                <tr>
+                  <td>{{country}}</td>
+                  <td class="currency">{{currency}}</td>
+                  <td class="purchase">{{formatCurrency purchase}}</td>
+                  <td class="sale">{{formatCurrency sale}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+          <div class="rates-card">
+            <header>
+              <h3>Kursy detaliczne</h3>
+              {{#if latestUpdates.retail}}
+              <p>
+                Ostatnia aktualizacja:
+                <time>{{formatDate latestUpdates.retail}}</time>
+              </p>
+              {{/if}}
+            </header>
+            <table>
+              <thead>
+                <tr>
+                  <th>Kraj</th>
+                  <th>Waluta</th>
+                  <th>Kupno</th>
+                  <th>Sprzedaż</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each rates.retail}}
                 <tr>
                   <td>{{country}}</td>
                   <td class="currency">{{currency}}</td>
