@@ -25,11 +25,19 @@ jobs:
         run: npm ci
 
       - name: Setup API
+        env:
+          API_USER: ${{ secrets.API_USER }}
+          API_PASSWORD: ${{ secrets.API_PASSWORD }}
         run: |
           cp ./packages/api/.env.ci ./packages/api/.env
           cp ./packages/api/db.dump.json ./packages/api/db.json
 
       - name: Setup website
+        env:
+          WEBSITE_ADMIN_USER: ${{ secrets.WEBSITE_ADMIN_USER }}
+          WEBSITE_ADMIN_PASSWORD: ${{ secrets.WEBSITE_ADMIN_PASSWORD }}
+          WEBSITE_API_USER: ${{ secrets.WEBSITE_API_USER }}
+          WEBSITE_API_PASSWORD: ${{ secrets.WEBSITE_API_PASSWORD }}
         run: |
           cp ./packages/website/.env.ci ./packages/website/.env
           npm run assets:build -w packages/website
