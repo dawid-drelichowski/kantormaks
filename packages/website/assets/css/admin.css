@@ -61,7 +61,7 @@ input.sale {
 }
 
 input.purchase {
-  color: var(--color-green);
+  color: var(--color-secondary);
 }
 
 input.submit {
