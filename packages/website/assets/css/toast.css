@@ -20,11 +20,11 @@ body.error .toast.error {
 }
 
 .toast.success {
-  background: var(--color-green);
+  background: var(--color-primary);
 }
 
 .toast.error {
-  background: var(--color-primary);
+  background: var(--color-secondary);
 }
 
 .toast-container {

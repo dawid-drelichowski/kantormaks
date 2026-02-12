@@ -118,7 +118,7 @@ p:has(.icon) {
 }
 
 .purchase {
-  color: var(--color-green);
+  color: var(--color-secondary);
 }
 
 .sale {
