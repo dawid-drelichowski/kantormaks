@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@eslint/css": "^0.14.1",
+    "@eslint/js": "^10.0.1",
     "@percy/cli": "^1.30.10",
     "@percy/playwright": "^1.0.8",
     "chokidar-cli": "^3.0.0",
