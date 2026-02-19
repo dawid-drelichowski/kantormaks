@@ -72,7 +72,7 @@ fastify.post(
     const current = await getRates()
     const next = request.body.wholesale.concat(request.body.retail)
     const updated = findChangedRates(current, next)
-    let result = ''
+    let result
 
     try {
       await updateRates(updated)
