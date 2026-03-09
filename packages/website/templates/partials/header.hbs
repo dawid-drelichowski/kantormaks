@@ -2,5 +2,18 @@
   <div class="header-container">
     <div class="logo">M</div>
     <h1>Kantor Maks</h1>
+    <label class="theme-toggle" aria-label="Przełącz motyw">
+      <input type="checkbox" id="theme-toggle" onchange="
+        const isDark = this.checked;
+        document.documentElement.classList.toggle('dark', isDark);
+        document.documentElement.classList.toggle('light', !isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      ">
+      <span class="toggle-track">
+        <span class="toggle-thumb"></span>
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </span>
+    </label>
   </div>
 </header>
