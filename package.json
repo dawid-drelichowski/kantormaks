@@ -14,7 +14,7 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@eslint/css": "^0.14.1",
+    "@eslint/css": "^1.0.0",
     "@eslint/js": "^10.0.1",
     "@percy/cli": "^1.30.10",
     "@percy/playwright": "^1.0.8",
