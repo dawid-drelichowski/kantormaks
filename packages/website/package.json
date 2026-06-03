@@ -20,15 +20,15 @@
     "@fastify/view": "^11.0.0",
     "fastify": "^5.8.5",
     "handlebars": "^4.7.8",
-    "qs": "^6.15.1"
+    "qs": "^6.15.2"
   },
   "imports": {
     "#config": "./config.js"
   },
   "devDependencies": {
-    "@playwright/test": "^1.59.1",
     "@swc/cli": "^0.8.1",
-    "@types/node": "^25.6.0",
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1",
     "glob-exec": "^0.1.1",
     "lightningcss-cli": "^1.27.0"
   }
