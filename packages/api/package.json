@@ -1,6 +1,6 @@
 {
   "name": "kantormaks-api",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "type": "module",
   "description": "Kantormaks API based on json-server",
   "scripts": {

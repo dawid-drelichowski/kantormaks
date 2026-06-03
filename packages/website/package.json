@@ -1,6 +1,6 @@
 {
   "name": "kantormaks-website",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "Kantormaks website based on Fastify",
   "scripts": {
     "start": "node server.js",
@@ -26,8 +26,8 @@
     "#config": "./config.js"
   },
   "devDependencies": {
-    "@swc/cli": "^0.8.1",
     "@playwright/test": "^1.60.0",
+    "@swc/cli": "^0.8.1",
     "@types/node": "^25.9.1",
     "glob-exec": "^0.1.1",
     "lightningcss-cli": "^1.27.0"
