@@ -29,3 +29,15 @@
 .map {
   mask-image: url("/public/icons/map.svg");
 }
+
+.sun {
+  mask-image: url("/public/icons/sun.svg");
+}
+
+.moon {
+  mask-image: url("/public/icons/moon.svg");
+}
+
+.device-laptop {
+  mask-image: url("/public/icons/device-laptop.svg");
+}
