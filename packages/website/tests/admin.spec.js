@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test'
 import config from '#config'
 import percySnapshot from '@percy/playwright'
+import { createAdminPage } from './admin/page.js'
 
 test.describe('Admin page', () => {
   const adminUrl = `${config.WEBSITE_URL}/admin`
@@ -13,13 +14,7 @@ test.describe('Admin page', () => {
 
   test('save changes properly', async ({ browser }) => {
     const valueToSet = '1.1'
-    const context = await browser.newContext({
-      httpCredentials: {
-        username: config.WEBSITE_ADMIN_USER,
-        password: config.WEBSITE_ADMIN_PASSWORD,
-      },
-    })
-    const page = await context.newPage()
+    const { context, page } = await createAdminPage(browser)
     await page.goto(adminUrl)
 
     await expect(page).toHaveTitle('Kantor Maks Wrocław - Panel administratora')
@@ -30,7 +25,7 @@ test.describe('Admin page', () => {
     }
 
     await Promise.all([
-      page.getByRole('button').click(),
+      page.locator('input[type="submit"]').click(),
       page.waitForURL(`${adminUrl}?success=true`),
     ])
 
@@ -42,6 +37,6 @@ test.describe('Admin page', () => {
     }
 
     await percySnapshot(page, 'Admin page')
-    await browser.close()
+    await context.close()
   })
 })

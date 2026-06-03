@@ -1,4 +1,5 @@
 @import "shared.css";
+@import "icon.css";
 
 main {
   max-width: var(--max-page-width);

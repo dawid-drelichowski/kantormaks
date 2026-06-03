@@ -1,13 +1,18 @@
 :root {
+  color-scheme: light dark;
   --color-primary: #79a05c;
   --color-secondary: #991b1b;
-  --background-color: #fff;
-  --text-primary: #111827;
+  --background-color: light-dark(#fff, #111827);
+  --text-primary: light-dark(#111827, #f9fafb);
   --text-secondary: #fff;
-  --border: #d1d5db;
+  --border: light-dark(#d1d5db, #4b5563);
   --font-semi-bold: 600;
-  --shadow-primary: 0 4px 16px rgba(0, 0, 0, 0.1);
-  --shadow-secondary: 0 4px 16px #374151;
+  --shadow-primary-size: 0 4px 16px;
+  --shadow-secondary-size: 0 4px 16px;
+  --shadow-primary: var(--shadow-primary-size)
+    light-dark(rgba(0, 0, 0, 0.1), rgba(31, 41, 55, 0.8));
+  --shadow-secondary: var(--shadow-secondary-size)
+    light-dark(#374151, rgba(0, 0, 0, 0.3));
   --min-page-width: 400px;
   --max-page-width: 1200px;
   --page-container-margin: 0 auto;
@@ -20,13 +25,20 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: #111827;
-    --text-primary: #f9fafb;
-    --border: #4b5563;
-    --shadow-primary: 0 16px 50px rgba(31, 41, 55, 0.8);
-    --shadow-secondary: 0 8px 32px rgba(0, 0, 0, 0.3);
+  :root:not(.light, .dark) {
+    --shadow-primary-size: 0 16px 50px;
+    --shadow-secondary-size: 0 8px 32px;
   }
+}
+
+:root.dark {
+  color-scheme: dark;
+  --shadow-primary-size: 0 16px 50px;
+  --shadow-secondary-size: 0 8px 32px;
+}
+
+:root.light {
+  color-scheme: light;
 }
 
 @media (max-width: 800px) {
@@ -52,19 +64,16 @@ html {
 }
 
 body {
-  /* eslint-disable-next-line css/use-baseline */
-  overscroll-behavior: none;
-  min-width: var(--min-page-width);
-  min-height: 100%;
-}
-
-body {
   font-family: Tahoma, Geneva, Verdana, sans-serif;
   background: var(--background-color);
   color: var(--text-primary);
   line-height: 1.6;
   display: flex;
   flex-direction: column;
+  /* eslint-disable-next-line css/use-baseline */
+  overscroll-behavior: none;
+  min-width: var(--min-page-width);
+  min-height: 100%;
 }
 
 main {
@@ -143,4 +152,32 @@ a {
   footer {
     font-size: 0.75rem;
   }
+}
+
+.theme-switcher {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.theme-switcher button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--text-primary);
+  transition: border-color 0.2s;
+}
+
+.theme-switcher button:hover {
+  border-color: var(--border);
+}
+
+.theme-switcher button.active {
+  border-color: var(--color-primary);
 }
