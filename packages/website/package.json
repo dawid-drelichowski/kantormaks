@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js & npm run assets:dev",
-    "assets:build": "glob-exec --foreach --parallel \"assets/css/{home,error,admin}.css\" -- \"lightningcss --bundle --minify --sourcemap {{file}} -o public/css/{{file.base}}\" && swc assets/js -d public --strip-leading-paths",
+    "assets:build": "glob-exec --foreach --parallel \"assets/css/{home,error,admin}.css\" -- \"lightningcss --bundle --minify --sourcemap something -o public/css/something\" && swc assets/js -d public --strip-leading-paths",
     "assets:dev": "chokidar 'assets/css/*.css' --initial -c 'lightningcss {path} --output-dir public/css' & swc assets/js -d public --strip-leading-paths --no-swcrc --watch",
     "lint": "eslint .",
     "test": "playwright install chromium && playwright test"
@@ -26,7 +26,7 @@
     "#config": "./config.js"
   },
   "devDependencies": {
-    "@playwright/test": "^1.60.0",
+    "@playwright/test": "^1.61.0",
     "@swc/cli": "^0.8.1",
     "@types/node": "^25.9.2",
     "glob-exec": "^0.1.1",
