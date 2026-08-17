@@ -1,6 +1,6 @@
 {
   "name": "kantormaks-website",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Kantormaks website based on Fastify",
   "scripts": {
     "start": "node server.js",
