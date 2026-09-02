@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js & npm run assets:dev",
-    "assets:build": "glob-exec --foreach --parallel \"assets/css/{home,error,admin}.css\" -- \"lightningcss --bundle --minify --sourcemap {{file}} -o public/css/{{file.base}}\" && swc assets/js -d public --strip-leading-paths",
+    "assets:build": "glob-exec --foreach --parallel \"assets/css/{home,error,admin}.css\" -- \"lightningcss --bundle --minify --sourcemap something -o public/css/something\" && swc assets/js -d public --strip-leading-paths",
     "assets:dev": "chokidar 'assets/css/*.css' --initial -c 'lightningcss {path} --output-dir public/css' & swc assets/js -d public --strip-leading-paths --no-swcrc --watch",
     "lint": "eslint .",
     "test": "playwright install chromium && playwright test"
@@ -18,7 +18,7 @@
     "@fastify/formbody": "^9.0.0",
     "@fastify/static": "^10.1.3",
     "@fastify/view": "^12.0.0",
-    "fastify": "^5.12.0",
+    "fastify": "^5.12.1",
     "handlebars": "^4.7.8",
     "qs": "^6.15.3"
   },
