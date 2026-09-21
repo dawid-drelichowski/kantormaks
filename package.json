@@ -29,11 +29,11 @@
     "prettier": "^3.3.3"
   },
   "allowScripts": {
-    "@swc/core@1.15.40": true,
-    "fsevents@2.3.2": true,
-    "lightningcss-cli@1.33.0": true,
-    "protobufjs@7.6.5": true,
-    "@percy/core@1.32.7": true,
-    "nx@23.1.1": true
+    "@swc/core": true,
+    "fsevents": true,
+    "lightningcss-cli": true,
+    "protobufjs": true,
+    "@percy/core": true,
+    "nx": true
   }
 }
