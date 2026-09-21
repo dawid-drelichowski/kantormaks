@@ -30,7 +30,7 @@
                 <tbody>
                   {{#each wholesale}}
                   <tr>
-                    <td>
+                    <td class="country">
                       <input
                         type="hidden"
                         name="wholesale[{{@index}}][id]"
@@ -54,7 +54,7 @@
                         class="country"
                       />
                     </td>
-                    <td>
+                    <td class="currency">
                       <input
                         type="text"
                         name="wholesale[{{@index}}][currency]"
@@ -63,7 +63,7 @@
                         class="currency"
                       />
                     </td>
-                    <td>
+                    <td class="purchase">
                       <input
                         type="number"
                         name="wholesale[{{@index}}][purchase]"
@@ -74,7 +74,7 @@
                         class="purchase"
                       />
                     </td>
-                    <td>
+                    <td class="sale">
                       <input
                         type="number"
                         name="wholesale[{{@index}}][sale]"
@@ -104,7 +104,7 @@
                 <tbody>
                   {{#each retail}}
                   <tr>
-                    <td>
+                    <td class="country">
                       <input
                         type="hidden"
                         name="retail[{{@index}}][id]"
@@ -128,7 +128,7 @@
                         class="country"
                       />
                     </td>
-                    <td>
+                    <td class="currency">
                       <input
                         type="text"
                         name="retail[{{@index}}][currency]"
@@ -137,7 +137,7 @@
                         class="currency"
                       />
                     </td>
-                    <td>
+                    <td class="purchase">
                       <input
                         type="number"
                         name="retail[{{@index}}][purchase]"
@@ -148,7 +148,7 @@
                         class="purchase"
                       />
                     </td>
-                    <td>
+                    <td class="sale">
                       <input
                         type="number"
                         name="retail[{{@index}}][sale]"
