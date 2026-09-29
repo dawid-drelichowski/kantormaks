@@ -40,6 +40,16 @@ td {
   text-align: left;
 }
 
+td.country {
+  width: 55%;
+}
+
+td.currency,
+td.purchase,
+td.sale {
+  width: 15%;
+}
+
 input.country,
 input.currency,
 input.purchase,
