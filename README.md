@@ -3,7 +3,7 @@
 > Modern web application for currency exchange office with admin panel and rate updates.
 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](LICENSE.md)
-[![Node.js](https://img.shields.io/badge/Node.js-24.x-green.svg)](https://nodejs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-26.x-green.svg)](https://nodejs.org/)
 [![Lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
 **Website:** [kantormaks.pl](https://kantormaks.pl)
@@ -134,7 +134,7 @@ Each schema enforces:
 
 ## 📦 Requirements
 
-- **Node.js** >= 24.x (see `.nvmrc`)
+- **Node.js** >= 26.x (see `.nvmrc`)
 - **npm** >= 11.x
 - **Git**
 - **Nginx** (for production deployment)
