@@ -49,3 +49,17 @@ jobs:
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         run: npx percy exec -- npm test -w packages/website
+      - name: Check visual changes
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          PERCY_PROJECT: ${{ vars.PERCY_PROJECT }}
+          PERCY_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+          PERCY_PASS_IF_APPROVED: ${{ (github.run_attempt > 1 || github.event_name == 'push') && '--pass-if-approved' || '' }}
+        run: >
+          npx percy build:wait
+          --project="$PERCY_PROJECT"
+          --commit="$PERCY_COMMIT"
+          --fail-on-changes
+          --timeout=300000
+          --interval=10000
+          $PERCY_PASS_IF_APPROVED
